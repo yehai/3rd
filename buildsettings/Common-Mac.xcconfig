@@ -1,0 +1,15 @@
+//
+// Kobold2D™ --- http://www.kobold2d.org
+//
+// Copyright (c) 2010-2011 Steffen Itterheim. 
+// Released under MIT License in Germany (LICENSE-Kobold2D.txt).
+//
+
+ARCHS = $(ARCHS_STANDARD_64_BIT)	// only 64-Bit apps allowed with ARC
+SDKROOT = macosx
+MACOSX_DEPLOYMENT_TARGET = 10.7		// ARC requires deployment to OS X 10.7 or later
+
+// Warnings
+GCC_WARN_64_TO_32_BIT_CONVERSION = YES
+
+GCC_PREFIX_HEADER = prefix/Prefix-Mac.pch

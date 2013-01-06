@@ -1,0 +1,138 @@
+/** \todo
+KoboldTouch ToDo List (or perhaps just some ideas)
+
+--------------------------------------------------
+QUESTIONS, IDEAS, THOUGHTS (What if ... ?)
+--------------------------------------------------
+
+* Model: also register by name on scene?
+* remove controller ref from model, communication should be one-way (controller to model, model knows nothing about controller)
+	physics: controller assigns physics controller reference
+	physics model communicates with physics controller model
+* Game Controller: support for multiple, reusable scene controllers (why?)
+* Editor: create minimalistic version to ensure architecture always considers & fits Editor requirements?
+	editor controller: parent or subclass of game controller? (tentatively: subclass, to be able to override presentScene etc)
+	switching scene view controllers: save/load them every time?
+	scenes: support display of multiple scenes at the same time?
+	how to save/load?
+* Model: references to parent model, scene model, game model (necessary?)
+* Tilemap ViewController:
+	how to determine "main" layer? (property)
+	one sprite-batched subcontroller per tile layer
+	one object layer subcontroller per object layer
+		both with TilemapLayer as model?
+	object subcontroller: one subcontroller per object?
+		special subcontrollers for rects, polys if not specified (property => class name)
+	attach object layer to specific tile layer? (due to parallax scrolling tile layers, ie object layer offsets need to be adjusted as well)
+		in general: merge all object layers with a specific tile layer!
+	how to incorporate subclassed controller & model?
+		properties: ControllerClass, ModelClass
+	need: focus object (or coord)
+	need: focus anchor point (default center of screen), plus gradual changes in focus point
+	auto-adjust to Retina (just assume all coords to be in points?)
+	debug draw layer (for objects, polys, gid numbers, coords)
+* disallow cocos2d's non-blocks API (ie CCCallFunc -> CCCallBlock) ??
+* initialization objects should support NSCopying and be copied during init
+
+--------------------------------------------------
+PROPOSED IMPROVEMENTS
+--------------------------------------------------
+
+* Physics Model: put objects that don't implement collision callbacks in a no-callback filter on physics side, or use BOOL flag (implementsContact...)
+
+--------------------------------------------------
+DONE (recently)
+--------------------------------------------------
+
+* Label ViewController
+* MultiTouch Controller
+* ParticleEffect VC
+* ParticleEffect BatchNode VC
+* Legacy Tilemap ViewController
+* ColorLayer VC
+* Motion Controller (accelerometer)
+* Scene Controller: init with model
+
+--------------------------------------------------
+TODO Now!
+--------------------------------------------------
+
+Non-Code
+* document KT basics
+* release video
+* LICENSE!
+* task tracker
+* add "build for archive" on build server
+
+
+* put the viewController back in spriteViewControllerWith... etc
+
+* define Audio Controller protocol
+* Keyboard/Mouse Input controller
+* Touch Controller with priority
+* ProgressTimer VC
+* RenderTexture VC
+
+--------------------------------------------------
+TODO Next
+--------------------------------------------------
+
+* Model: create mutable point, size, rect etc.
+* Model: actions like CCAction, but accepting both duration or speed, and reusable.
+* Model: abilities, like actions but run forever (until removed). Abilities can be used to create re-usable actions. Can be enabled/disabled.
+* add/remove Subcontroller: should send load etc when controller is already active
+* EntityPool Controller (re-use fixed number of view controllers and their models)
+* Tilemap ViewController (ortho, iso, hex)
+* Particle & Batch ViewController
+* Menu ViewController: fully implemented
+* Button ViewController
+* define Notification Controller protocol
+* ScriptModel: run Lua script, contains script variables, keyed properties
+
+--------------------------------------------------
+TODO Eventually
+--------------------------------------------------
+
+* Gestures Controller
+* Motion Controller (gyroscope, device motion, shake)
+* Parallax ViewController (generic, works with any subcontrollers)
+* Animation Controller (Statemachine?)
+* AssetCache Controller (global): wraps cocos2d's cache classes
+* a system where controllers can declare their dependencies
+	ie dependsOnControllersWithClassNames, returns dictionary of class strings and setXXXController selectors, parent controller assigns those controllers automagically
+* Slider ViewController
+* GameCenter Controller: Sign in, Achievements, Leaderboards
+* UserDefaults/Preferences Controller
+* In-App Purchase Controller
+* iCloud Controller
+* Twitter Controller
+* Facebook Controller
+* Threading support (dispatch each step method)
+
+--------------------------------------------------
+TODO Maybe, Maybe Not
+--------------------------------------------------
+
+* Menu VC (complete)
+* Virtual Joypad ViewController
+* Audio Recording Controller
+* Network Controller: depends on Game Center, sends/receives data packets
+* Settings Controller (adds settings to Settings App, reads from Settings App, ie language etc)
+* DeviceInfo Controller (type of device, OS version, feature availability)
+* File Controller (documents folder, bundle access, file access, file suffix handling)
+* Localization Controller (Loca strings)
+* Ad Controller (iAd, AdMob, ...)
+* Analytics Controller
+
+* UIKit ViewController (embedd any UIKit view in the view hierarchy, with limitations)
+* Storyboard controller (global, enables embedding cocos2d in a storyboard)
+
+// these may be too OS-specific and non-game but perhaps can be wrapped for most common purposes
+* Video Controller (fullscreen video playback)
+* iPod Controller (iPod library access)
+* Camera Controller (Camera access)
+* Photo Library Controller
+
+
+
+*/
