@@ -249,7 +249,7 @@ static Class PixelMaskSpriteClass = nil;
 
 -(BOOL) pixelMaskIntersectsNode:(CCNode*)other
 {
-	if (rotation_ != 0.0f || other.rotation != 0.0f || self.scale != 1.0f || other.scale != 1.0f)
+	if (self.rotation != 0.0f || other.rotation != 0.0f || self.scale != 1.0f || other.scale != 1.0f)
 	{
 		CCLOG(@"pixelMaskIntersectsNode: either or both nodes are rotated and/or scaled. This test only works with non-rotated, non-scaled nodes.");
 		return NO;

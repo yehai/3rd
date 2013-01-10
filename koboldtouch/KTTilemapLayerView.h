@@ -15,12 +15,13 @@
 @protected
 @private
 	CCSpriteBatchNode* _batchNode;
-	CGPoint _rootNodePreviousPosition;
+	CGPoint _previousPosition;
 	CGSize _visibleTilesOnScreen;
-	
-	__weak KTTilemapLayer* _tileLayer;
 }
 
 -(id) initWithTileLayer:(KTTilemapLayer*)tileLayer;
+
+-(void) setScrollCenter:(CGPoint)scrollCenter;
+-(void) drawTileLayer:(KTTilemapLayer*)tileLayer;
 
 @end

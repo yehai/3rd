@@ -28,8 +28,9 @@ FORCE_LOAD_COCOS2D = -force_load "$(BUILT_PRODUCTS_DIR)/libcocos2d-ios.a"
 // causes CCAsyncObject undefined symbol linker error when uncommented
 //FORCE_LOAD_COCOS2D_EXTENSIONS = -force_load "$(BUILT_PRODUCTS_DIR)/libcocos2d-extensions-ios.a"
 FORCE_LOAD_KOBOLD2D = -force_load "$(BUILT_PRODUCTS_DIR)/libkobold2d-ios.a"
+FORCE_LOAD_KOBOLDTOUCH = -force_load "$(BUILT_PRODUCTS_DIR)/libkoboldtouch-ios.a"
 
-KKFW_IOS = $(KKFW_SysConfig) $(KKFW_AVFoundation) $(KKFW_CoreGraphics) $(KKFW_CoreLocation) $(KKFW_MediaPlayer) $(KKFW_OpenGLES) $(FORCE_LOAD_KOBOLD2D) $(FORCE_LOAD_COCOS2D) $(FORCE_LOAD_COCOS2D_EXTENSIONS)
+KKFW_IOS = $(KKFW_SysConfig) $(KKFW_AVFoundation) $(KKFW_CoreGraphics) $(KKFW_CoreLocation) $(KKFW_MediaPlayer) $(KKFW_OpenGLES) $(FORCE_LOAD_KOBOLD2D) $(FORCE_LOAD_KOBOLDTOUCH) $(FORCE_LOAD_COCOS2D) $(FORCE_LOAD_COCOS2D_EXTENSIONS)
 
 
 // iOS Weak Frameworks

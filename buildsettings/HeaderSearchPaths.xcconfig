@@ -24,7 +24,7 @@ COCOSDENSHION = $(KKLIBROOT)/cocos2d-iphone/CocosDenshion/CocosDenshion $(KKLIBR
 BOX2DROOT = $(KKLIBROOT)/Box2D
 BOX2D = $(BOX2DROOT) $(BOX2DROOT)/Box2D $(BOX2DROOT)/Box2D/Rope $(BOX2DROOT)/Box2D/Collision $(BOX2DROOT)/Box2D/Collision/Shapes $(BOX2DROOT)/Box2D/Common $(BOX2DROOT)/Box2D/Dynamics $(BOX2DROOT)/Box2D/Dynamics/Contacts $(BOX2DROOT)/Box2D/Dynamics/Joints
 VTPG = $(KKLIBROOT)/VTPG
-LUA = $(KKLIBROOT)/Lua/src
+LUA = $(KKLIBROOT)/lua/src
 BITARRAY = $(KKLIBROOT)/bitarray_c
 
 HEADER_SEARCH_PATHS = $(inherited) $(BOX2D)

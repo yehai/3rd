@@ -193,12 +193,12 @@
 		{
 			KTTrueTypeFontLabel* ttfLabel = (KTTrueTypeFontLabel*)_fontLabel;
 			_labelNode = [CCLabelTTF labelWithString:ttfLabel.text
+											fontName:ttfLabel.fontName
+											fontSize:ttfLabel.fontSize
 										  dimensions:ttfLabel.contentSize
 										  hAlignment:ttfLabel.horizontalAlignment
 										  vAlignment:ttfLabel.verticalAlignment
-									   lineBreakMode:ttfLabel.lineBreakBehavior
-											fontName:ttfLabel.fontName
-											fontSize:ttfLabel.fontSize];
+									   lineBreakMode:ttfLabel.lineBreakBehavior];
 			break;
 		}
 		case KTLabelTypeBitmapFont:

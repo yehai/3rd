@@ -82,11 +82,6 @@ static CDBufferManager *bufferManager = nil;
 
 #pragma mark SimpleAudioEngine - background music
 
--(void) setBackgroundMusicCompletionListener:(id) listener selector:(SEL) selector
-{
-	[am setBackgroundMusicCompletionListener:listener selector:selector];
-}
-
 -(void) preloadBackgroundMusic:(NSString*) filePath {
 	[am preloadBackgroundMusic:filePath];
 }
@@ -127,15 +122,6 @@ static CDBufferManager *bufferManager = nil;
 }
 
 #pragma mark SimpleAudioEngine - sound effects
-
-- (void)pauseAllEffects
-{
-	[soundEngine pauseAllSounds];
-}
-- (void)resumeAllEffects
-{
-	[soundEngine resumeAllSounds];
-}
 
 -(ALuint) playEffect:(NSString*) filePath
 {

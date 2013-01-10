@@ -13,67 +13,7 @@
 #import "KTSceneModel.h"
 #import "KTMultiTouchController.h"
 #import "KTMotionController.h"
-
-#import "CCScene.h"
-#import "CCDirector.h"
-
-@interface KTSceneViewController (Internal)
--(void) internal_viewDidDisappear;
-@end
-
-
-@interface KTCCScene : CCScene
-@property (nonatomic) KTSceneViewController* sceneViewController;
-@end
-
-@implementation KTCCScene
-/*
--(void) addChild:(CCNode *)node z:(NSInteger)z tag:(NSInteger)tag
-{
-	NSLog(@"scene add child: %@", node);
-	[super addChild:node z:z tag:tag];
-}
- */
--(void) onEnter
-{
-	[super onEnter];
-	BOOL pause = self.sceneViewController.gameController.pauseScenesDuringTransition;
-	self.sceneViewController.paused = pause;
-	[self.sceneViewController internal_pauseActions:pause];
-}
--(void) onEnterTransitionDidFinish
-{
-	[super onEnterTransitionDidFinish];
-	self.sceneViewController.paused = NO;
-	[self.sceneViewController internal_pauseActions:NO];
-}
--(void) onExitTransitionDidStart
-{
-	[super onExitTransitionDidStart];
-	BOOL pause = self.sceneViewController.gameController.pauseScenesDuringTransition;
-	self.sceneViewController.paused = pause;
-	[self.sceneViewController internal_pauseActions:pause];
-}
--(void) onExit
-{
-	[super onExit];
-	self.sceneViewController.paused = NO;
-	[self.sceneViewController internal_pauseActions:NO];
-}
--(void) cleanup
-{
-	// inform about cleanup, which for scenes only occurs when the scene has been replaced by another
-	[self.sceneViewController internal_viewDidDisappear];
-
-	[super cleanup];
-}
--(void) dealloc
-{
-	NSLog(@"dealloc: %@", self);
-}
-@end
-
-
+#import "KTCCScene.h"
 
 @implementation KTSceneViewController
 
@@ -225,6 +165,7 @@ You have to wait 1 frame before presenting another scene.\n\n", self.scene, self
 
 #pragma mark Setup/Cleanup
 
+/*
 -(void) sendLoadToControllersAndModels:(KTController*)controller
 {
 	// only create model if not assigned already (ie via loading an archive)
@@ -249,6 +190,7 @@ You have to wait 1 frame before presenting another scene.\n\n", self.scene, self
 		[self sendLoadToControllersAndModels:subController];
 	}
 }
+ */
 
 -(void) sendUnloadToControllersAndModels:(KTController*)controller
 {
@@ -262,6 +204,7 @@ You have to wait 1 frame before presenting another scene.\n\n", self.scene, self
 	[controller.model unload];
 }
 
+/*
 -(void) sendViewWillLoadToViewController:(KTViewController*)viewController
 {
 	if ([viewController isKindOfClass:[KTViewController class]])
@@ -303,6 +246,7 @@ You have to wait 1 frame before presenting another scene.\n\n", self.scene, self
 		}
 	}
 }
+ */
 
 -(void) sendViewWillDisappearToViewController:(KTViewController*)viewController
 {

@@ -39,11 +39,6 @@
 @property	(readwrite,retain)	id			target;
 @property	(readwrite,retain)	id			data;
 @end
-// qiup added at 2013-1-7
-@implementation CCAsyncObject
-
-
-@end
 
 @interface CCTextureCache (CCAsyncObject)
 

@@ -60,5 +60,6 @@
 
 // internal use only, called by KTGameController when presenting scene, calls loadView method of view controllers
 -(void) internal_viewWillDisappear;
+-(void) internal_viewDidDisappear;
 
 @end

@@ -10,5 +10,5 @@
 
 NSString* koboldTouchVersion()
 {
-	return @"KoboldTouch™ v6.0.3";
+	return @"KoboldTouch™ v6.0.5";
 }

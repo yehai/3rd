@@ -52,16 +52,16 @@
 
 	for (KTTilemapLayer* layer in tilemapModel.tilemap.layers)
 	{
-		if (layer.isObjectLayer == NO)
-		{
-			KTTilemapLayerViewController* layerViewController = [[KTTilemapLayerViewController alloc] initWithTileLayer:layer];
-			[self addSubController:layerViewController];
-		}
-		else
+		if (layer.isObjectLayer)
 		{
 			// TODO: object layers
 			//KTTilemapLayerViewController* layerViewController = [self.subControllers lastObject];
 			//layerViewController.objectLayer = layer;
+		}
+		else
+		{
+			KTTilemapLayerViewController* layerViewController = [[KTTilemapLayerViewController alloc] initWithTilemapModel:tilemapModel tileLayer:layer];
+			[self addSubController:layerViewController];
 		}
 	}
 }

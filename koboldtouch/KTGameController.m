@@ -214,6 +214,10 @@ __weak static KTGameController* _gameControllerInstance = nil;
 	CCTransitionScene* transition = [self transitionSceneWithScene:sceneViewController.scene
 													transitionType:_presentNextScene.transitionType
 														  duration:_presentNextScene.transitionDuration];
+
+	// let go before replacing scene, otherwise scene may be attempted to change again in next update
+	_presentNextScene = nil;
+	
 	if (transition)
 	{
 		[self internal_presentScene:transition];
@@ -224,8 +228,6 @@ __weak static KTGameController* _gameControllerInstance = nil;
 	{
 		[self internal_presentScene:sceneViewController.scene];
 	}
-
-	_presentNextScene = nil; // let go
 }
 
 -(void) presentSceneViewController:(KTSceneViewController*)sceneViewController
@@ -333,40 +335,40 @@ __weak static KTGameController* _gameControllerInstance = nil;
 			transition = [CCTransitionRotoZoom transitionWithDuration:duration scene:scene];
 			break;
 		case KTSceneTransitionTypeFlipAngularFromBottomLeft:
-			transition = [CCTransitionFlipAngular transitionWithDuration:duration scene:scene orientation:kOrientationRightOver];
+			transition = [CCTransitionFlipAngular transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationRightOver];
 			break;
 		case KTSceneTransitionTypeFlipAngularFromTopRight:
-			transition = [CCTransitionFlipAngular transitionWithDuration:duration scene:scene orientation:kOrientationLeftOver];
+			transition = [CCTransitionFlipAngular transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationLeftOver];
 			break;
 		case KTSceneTransitionTypeZoomAndFlipAngularFromBottomLeft:
-			transition = [CCTransitionZoomFlipAngular transitionWithDuration:duration scene:scene orientation:kOrientationRightOver];
+			transition = [CCTransitionZoomFlipAngular transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationRightOver];
 			break;
 		case KTSceneTransitionTypeZoomAndFlipAngularFromTopRight:
-			transition = [CCTransitionZoomFlipAngular transitionWithDuration:duration scene:scene orientation:kOrientationLeftOver];
+			transition = [CCTransitionZoomFlipAngular transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationLeftOver];
 			break;
 		case KTSceneTransitionTypeFlipHorizontalFromLeft:
-			transition = [CCTransitionFlipX transitionWithDuration:duration scene:scene orientation:kOrientationLeftOver];
+			transition = [CCTransitionFlipX transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationLeftOver];
 			break;
 		case KTSceneTransitionTypeFlipHorizontalFromRight:
-			transition = [CCTransitionFlipX transitionWithDuration:duration scene:scene orientation:kOrientationRightOver];
+			transition = [CCTransitionFlipX transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationRightOver];
 			break;
 		case KTSceneTransitionTypeFlipVerticalFromTop:
-			transition = [CCTransitionFlipY transitionWithDuration:duration scene:scene orientation:kOrientationUpOver];
+			transition = [CCTransitionFlipY transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationUpOver];
 			break;
 		case KTSceneTransitionTypeFlipVerticalFromBottom:
-			transition = [CCTransitionFlipY transitionWithDuration:duration scene:scene orientation:kOrientationDownOver];
+			transition = [CCTransitionFlipY transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationDownOver];
 			break;
 		case KTSceneTransitionTypeZoomAndFlipHorizontalFromLeft:
-			transition = [CCTransitionZoomFlipX transitionWithDuration:duration scene:scene orientation:kOrientationLeftOver];
+			transition = [CCTransitionZoomFlipX transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationLeftOver];
 			break;
 		case KTSceneTransitionTypeZoomAndFlipHorizontalFromRight:
-			transition = [CCTransitionZoomFlipX transitionWithDuration:duration scene:scene orientation:kOrientationRightOver];
+			transition = [CCTransitionZoomFlipX transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationRightOver];
 			break;
 		case KTSceneTransitionTypeZoomAndFlipVerticalFromTop:
-			transition = [CCTransitionZoomFlipY transitionWithDuration:duration scene:scene orientation:kOrientationUpOver];
+			transition = [CCTransitionZoomFlipY transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationUpOver];
 			break;
 		case KTSceneTransitionTypeZoomAndFlipVerticalFromBottom:
-			transition = [CCTransitionZoomFlipY transitionWithDuration:duration scene:scene orientation:kOrientationDownOver];
+			transition = [CCTransitionZoomFlipY transitionWithDuration:duration scene:scene orientation:kCCTransitionOrientationDownOver];
 			break;
 		case KTSceneTransitionTypeShrinkAndGrow:
 			transition = [CCTransitionShrinkGrow transitionWithDuration:duration scene:scene];

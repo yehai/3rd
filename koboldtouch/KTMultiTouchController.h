@@ -35,7 +35,7 @@ typedef NSTouch KTTouch;
 @property (nonatomic, readonly) CGPoint locationInGLView;
 /** The previous touch location in GL (cocos2d) coordinates. */
 @property (nonatomic, readonly) CGPoint previousLocationInGLView;
-/** If a touch delegate sets this property to YES, the touch will not be forwarded to other delegates. Defaults to NO. */
+/** If a touch delegate sets this property to YES, this particular touch will not be forwarded to other delegates. Defaults to NO. */
 @property (nonatomic) BOOL swallowTouch;
 
 // internal

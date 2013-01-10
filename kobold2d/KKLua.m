@@ -241,7 +241,9 @@ int wax_pcall(lua_State *L, int argumentCount, int returnCount) {
 {
 	NSAssert1(aFile != nil, @"%@: file is nil", NSStringFromSelector(_cmd));
 	
-	aFile = [[CCFileUtils sharedFileUtils] fullPathFromRelativePath:aFile];
+	aFile = [[NSBundle mainBundle] pathForResource:[aFile lastPathComponent]
+											ofType:nil
+									   inDirectory:[aFile stringByDeletingLastPathComponent]];
 	
 	// fix for unit tests
 	if ([[NSFileManager defaultManager] fileExistsAtPath:aFile] == NO)
@@ -266,7 +268,9 @@ int wax_pcall(lua_State *L, int argumentCount, int returnCount) {
 {
 	NSAssert1(aFile != nil, @"%@: file is nil", NSStringFromSelector(_cmd));
 
-	aFile = [[CCFileUtils sharedFileUtils] fullPathFromRelativePath:aFile];
+	aFile = [[NSBundle mainBundle] pathForResource:[aFile lastPathComponent]
+											ofType:nil
+									   inDirectory:[aFile stringByDeletingLastPathComponent]];
 
 	if (aPrefix == nil)
 	{

@@ -7,6 +7,7 @@
 //
 
 #import "KTTilemapLayerView.h"
+#import "CCDirectorExtensions.h"
 
 @interface KTTilemapLayerView (PrivateMethods)
 // declare private methods here
@@ -19,23 +20,20 @@
 	self = [super init];
 	if (self)
 	{
-		_tileLayer = tileLayer;
-		
 		// FIXME: improve by rendering quads directly
 		// for the time being rendering is simply sprite batched sprites
+
+		_previousPosition = CGPointMake(INT_MAX, INT_MAX);
 		
-		_rootNodePreviousPosition = CGPointMake(INT_MAX, INT_MAX);
-		
-		CCTexture2D* tilesetTexture = _tileLayer.tiles.tileset.texture;
+		CCTexture2D* tilesetTexture = tileLayer.tiles.tileset.texture;
 		[tilesetTexture setAliasTexParameters];
 		
 		_batchNode = [CCSpriteBatchNode batchNodeWithTexture:tilesetTexture];
-		_batchNode.visible = _tileLayer.visible;
 		[self addChild:_batchNode];
 		
 		// create initial tiles to fill screen
 		CGSize winSize = [CCDirector sharedDirector].winSize;
-		CGSize gridSize = _tileLayer.tilemap.gridSize;
+		CGSize gridSize = tileLayer.tilemap.gridSize;
 		
 		_visibleTilesOnScreen = CGSizeMake(winSize.width / gridSize.width + 1, winSize.height / gridSize.height + 1);
 		
@@ -49,43 +47,33 @@
 				[_batchNode addChild:tile];
 			}
 		}
-		
-		[self scheduleUpdate];
 	}
 	return self;
 }
 
-// scheduled update method
--(void) update:(ccTime)delta
+-(void) setScrollCenter:(CGPoint)scrollCenter
 {
-	CGPoint rootNodePosition = self.position;
-	if (rootNodePosition.x > 0.0f)
-	{
-		rootNodePosition.x = 0.0f;
-		self.position = CGPointMake(0.0f, rootNodePosition.y);
-	}
-	if (rootNodePosition.y > 0.0f)
-	{
-		rootNodePosition.y = 0.0f;
-		self.position = CGPointMake(rootNodePosition.x, 0.0f);
-	}
-	
-	if (CGPointEqualToPoint(rootNodePosition, _rootNodePreviousPosition) == NO)
+	CGPoint windowCenter = [CCDirector sharedDirector].windowCenter;
+	CGPoint pos = ccpMult(ccpSub(scrollCenter, windowCenter), -1.0f);
+	pos.x = fminf(pos.x, 0.0f);
+	pos.y = fminf(pos.y, 0.0f);
+	self.position = pos;
+}
+
+-(void) drawTileLayer:(KTTilemapLayer*)tileLayer
+{
+	if (CGPointEqualToPoint(position_, _previousPosition) == NO)
 	{
 		// create initial tiles to fill screen
-		KTTilemapLayerTiles* tiles = _tileLayer.tiles;
+		KTTilemapLayerTiles* tiles = tileLayer.tiles;
 		KTTilemapTileset* tileset = tiles.tileset;
-		CGSize gridSize = _tileLayer.tilemap.gridSize;
-		CGSize mapSize = _tileLayer.tilemap.mapSize;
+		CGSize gridSize = tileLayer.tilemap.gridSize;
+		CGSize mapSize = tileLayer.tilemap.mapSize;
 		CGSize halfTileSize = CGSizeMake(tileset.tileSize.width * 0.5f, tileset.tileSize.height * 0.5f);
 		
-		CGPoint rootNodeAbsPosition = CGPointMake(fabsf(rootNodePosition.x), fabsf(rootNodePosition.y));
-		CGPoint tileOffset = CGPointMake((int)(rootNodeAbsPosition.x / gridSize.width), (int)(rootNodeAbsPosition.y / gridSize.height));
+		CGPoint absoluteScrollPosition = CGPointMake(fabsf(position_.x), fabsf(position_.y));
+		CGPoint tileOffset = CGPointMake((int)(absoluteScrollPosition.x / gridSize.width), (int)(absoluteScrollPosition.y / gridSize.height));
 		CGPoint pointOffset = CGPointMake((int)(tileOffset.x * gridSize.width) + 0.5f, (int)(tileOffset.y * gridSize.height) + 0.5f);
-		
-		//CGSize winSize = [CCDirector sharedDirector].winSize;
-		//CGPoint focusPosition = CGPointMake(self.rootNode.position.x * 2, self.rootNode.position.y * 2);
-		//CGPoint focusViewCenter = CGPointMake(winSize.width / 2, winSize.height / 2);
 		
 		// focus pos is world position in tilemap
 		// start tile coord is half screen size minus focus
@@ -104,7 +92,7 @@
 				tile.visible = NO;
 				
 				// no tile?
-				unsigned int gid = [_tileLayer tileWithFlagsAt:CGPointMake(tilePosX + tileOffset.x, (mapSize.height - 1 - tilePosY) - tileOffset.y)];
+				unsigned int gid = [tileLayer tileWithFlagsAt:CGPointMake(tilePosX + tileOffset.x, (mapSize.height - 1 - tilePosY) - tileOffset.y)];
 				if (gid == 0)
 					continue;
 				
@@ -163,7 +151,7 @@
 		
 	}
 	
-	_rootNodePreviousPosition = rootNodePosition;
+	_previousPosition = position_;
 }
 
 @end

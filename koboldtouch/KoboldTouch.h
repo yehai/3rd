@@ -13,9 +13,12 @@
 #import "KTSceneTransitionTypes.h"
 #import "KTStepInfo.h"
 #import "KTTextMenu.h"
-#import "NSCoder+KTCoderCategory.h"
 #import "KTMutableNumber.h"
 #import "KTMultiTouchProtocol.h"
+
+// Categories
+#import "NSCoder+KTCoderCategory.h"
+#import "CCNode+Autoscale.h"
 
 // Base Classes
 #import "KTModelControllerBase.h"
@@ -32,8 +35,6 @@
 #import "KTGameController.h"
 #import "KTDebugController.h"
 #import "KTArchiveController.h"
-#import "KTMultiTouchController.h"
-#import "KTMotionController.h"
 
 //#import "KTNotificationController.h"
 //#import "KTAudioController.h"
@@ -42,6 +43,9 @@
 
 // Scene Controllers
 #import "KTPhysicsController.h"
+#import "KTMultiTouchController.h"
+#import "KTMotionController.h"
+#import "KTAutoscaleController.h"
 
 // View Controllers
 #import "KTViewController.h"

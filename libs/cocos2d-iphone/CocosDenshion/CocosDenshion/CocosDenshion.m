@@ -24,6 +24,11 @@
 
 #import "CocosDenshion.h"
 
+// Use cocos2d Fileutils or Builtin fileutils ?
+#ifndef CD_USE_OWN_FILEUTILS
+#import "CCFileUtils.h"
+#endif
+
 ALvoid  alBufferDataStaticProc(const ALint bid, ALenum format, ALvoid* data, ALsizei size, ALsizei freq);
 ALvoid  alcMacOSXMixerOutputRateProc(const ALdouble value);
 
@@ -84,6 +89,9 @@ float const kCD_GainDefault = 1.0f;
 
 +(NSString*) fullPathFromRelativePath:(NSString*) relPath
 {
+#ifndef CD_USE_OWN_FILEUTILS
+    return [[CCFileUtils sharedFileUtils] fullPathFromRelativePathIgnoringResolutions:relPath];
+#else
 	// do not convert an absolute path (starting with '/')
 	if(([relPath length] > 0) && ([relPath characterAtIndex:0] == '/'))
 	{
@@ -101,6 +109,7 @@ float const kCD_GainDefault = 1.0f;
 		fullpath = relPath;
 
 	return fullpath;
+#endif
 }
 
 @end
@@ -766,7 +775,7 @@ static BOOL _mixerRateSet = NO;
 			if (thisSourceGroup->nonInterruptible) {
 				//Check if this source is playing, if so it can't be interrupted
 				alGetSourcei(_sources[sourceIndex].sourceId, AL_SOURCE_STATE, &sourceState);
-				if (sourceState != AL_PLAYING && sourceState != AL_PAUSED) {
+				if (sourceState != AL_PLAYING) {
 					//complete = YES;
 					//Set start index so next search starts at the next position
 					thisSourceGroup->startIndex = thisSourceGroup->currentIndex + 1;
@@ -775,12 +784,10 @@ static BOOL _mixerRateSet = NO;
 					sourceIndex = -1;//The source index was no good because the source was playing
 				}
 			} else {
-				if (sourceState != AL_PAUSED) {
-					//complete = YES;
-					//Set start index so next search starts at the next position
-					thisSourceGroup->startIndex = thisSourceGroup->currentIndex + 1;
-					break;
-				}
+				//complete = YES;
+				//Set start index so next search starts at the next position
+				thisSourceGroup->startIndex = thisSourceGroup->currentIndex + 1;
+				break;
 			}
 		}
 		thisSourceGroup->currentIndex++;
@@ -971,34 +978,6 @@ static BOOL _mixerRateSet = NO;
 	}
 	alGetError();//Clear error in case we stopped any sounds that couldn't be stopped
 }
-
-- (void)pauseAllSounds
-{
-	for (int i=0; i < sourceTotal_; i++)
-	{
-		ALint state;
-		alGetSourcei(_sources[i].sourceId, AL_SOURCE_STATE, &state);
-		if(state == AL_PLAYING)
-		{
-			alSourcePause(_sources[i].sourceId);
-		}
-	}
-	alGetError();
-}
-- (void)resumeAllSounds
-{
-	for (int i=0; i < sourceTotal_; i++)
-	{
-		ALint state;
-		alGetSourcei(_sources[i].sourceId, AL_SOURCE_STATE, &state);
-		if(state == AL_PAUSED)
-		{
-			alSourcePlay(_sources[i].sourceId);
-		}
-	}
-	alGetError();
-}
-
 
 /**
  * Set a source group as non interruptible.  Default is that source groups are interruptible.
@@ -1191,7 +1170,6 @@ static BOOL _mixerRateSet = NO;
 	alSourcePause(_sourceId);
 	return CDSOUNDSOURCE_ERROR_HANDLER;
 }
-
 
 -(BOOL) rewind {
 	alSourceRewind(_sourceId);

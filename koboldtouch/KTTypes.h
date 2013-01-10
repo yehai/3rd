@@ -11,6 +11,8 @@
 
 /** @file KTTypes.h */
 
+static NSString* KTDirectorDidReshapeProjectionNotification = @"KTDirectorDidReshapeProjectionNotification";
+
 #if KK_PLATFORM_IOS
 
 //

@@ -217,7 +217,6 @@ typedef enum {
 /** Returns whether or not the background music is playing */
 -(BOOL) isBackgroundMusicPlaying;
 
-/** called when background music track has stopped playing */
 -(void) setBackgroundMusicCompletionListener:(id) listener selector:(SEL) selector;
 
 @end

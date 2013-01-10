@@ -37,26 +37,32 @@
 #import "KTVersion.h"
 #import "KKStartupConfig.h"
 #import "KKHitTest.h"
+#import "KKInput.h"
 
 #import "JRSwizzle.h"
 #import "cocos2d.h"
 #import "cocos2d-extensions.h"
 #import <objc/runtime.h>
 
+#import "KTTypes.h"
 #import "KTGameController.h"
+#import "CCNode.h"
+#import "CCNode+Autoscale.h"
+#import "CCSpriteBatchNode+Autoscale.h"
 
 #if KK_PLATFORM_IOS
 
 @implementation KKNavigationController
 
-// Only used by iOS 6 and newer.
 -(NSUInteger) supportedInterfaceOrientations
 {
-	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-	{
-		return UIInterfaceOrientationMaskLandscape;
-	}
-	return UIInterfaceOrientationMaskLandscape;
+	KKAppDelegate* appDelegate = (KKAppDelegate*)[UIApplication sharedApplication].delegate;
+	KKStartupConfig* config = appDelegate.config;
+	
+	return ((config.supportsInterfaceOrientationPortrait ? UIInterfaceOrientationMaskPortrait : 0) |
+			(config.supportsInterfaceOrientationPortraitUpsideDown ? UIInterfaceOrientationMaskPortraitUpsideDown : 0) |
+			(config.supportsInterfaceOrientationLandscapeLeft ? UIInterfaceOrientationMaskLandscapeLeft : 0) |
+			(config.supportsInterfaceOrientationLandscapeRight ? UIInterfaceOrientationMaskLandscapeRight : 0));
 }
 
 // Supported orientations. Customize it for your own needs
@@ -91,11 +97,15 @@
 {
 	if (director.runningScene == nil)
 	{
+		[[KKInput sharedInput] resetInputStates];
+
 		KKAppDelegate* appDelegate = (KKAppDelegate*)[UIApplication sharedApplication].delegate;
 		[appDelegate createGameController];
 		[appDelegate initializationComplete];
 		[appDelegate tryToRunFirstScene];
 	}
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:KTDirectorDidReshapeProjectionNotification object:nil];
 }
 @end
 #endif
@@ -143,6 +153,20 @@
 	}
 	if ([CCScheduler jr_swizzleMethod:@selector(update:) 
 						   withMethod:@selector(tickReplacement:) error:&error] == NO) {
+		NSAssert1(nil, @"Method swizzling error: %@", error);
+	}
+
+	[CCNode setAutoscaleNodeProxyClass];
+	if ([CCNode jr_swizzleMethod:@selector(cleanup)
+					  withMethod:@selector(cleanupReplacement) error:&error] == NO) {
+		NSAssert1(nil, @"Method swizzling error: %@", error);
+	}
+	if ([CCNode jr_swizzleMethod:@selector(visit)
+					  withMethod:@selector(visitReplacement) error:&error] == NO) {
+		NSAssert1(nil, @"Method swizzling error: %@", error);
+	}
+	if ([CCSpriteBatchNode jr_swizzleMethod:@selector(visit)
+								 withMethod:@selector(visitReplacement) error:&error] == NO) {
 		NSAssert1(nil, @"Method swizzling error: %@", error);
 	}
 }
@@ -215,12 +239,12 @@
 		CGSize screenSize = director.winSize;
 		CCScene* dummyScene = [CCScene node];
 		NSString* string = [NSString stringWithFormat:@"ERROR in config.lua\n\nFirstSceneClassName = '%@'\n\nThis class does not exist or\ndoes not inherit from CCScene!", config.firstSceneClassName];
-		CCLabelTTF* label = [CCLabelTTF labelWithString:string 
+		CCLabelTTF* label = [CCLabelTTF labelWithString:string
+											   fontName:@"Arial"
+											   fontSize:24
 											 dimensions:screenSize 
 											 hAlignment:kCCTextAlignmentCenter 
-										  lineBreakMode:kCCLineBreakModeWordWrap 
-											   fontName:@"Arial" 
-											   fontSize:24];
+										  lineBreakMode:kCCLineBreakModeWordWrap];
 		label.position = CGPointMake(screenSize.width / 2, screenSize.height / 4);
 		label.color = ccRED;
 		[dummyScene addChild:label];
@@ -294,15 +318,19 @@
 									sharegroup:nil
 								 multiSampling:config.gLViewMultiSampling
 							   numberOfSamples:config.gLViewNumberOfSamples];
-	
+
+	[glView setUserInteractionEnabled:config.enableUserInteraction];
+	[glView setMultipleTouchEnabled:config.enableMultiTouch];
+
 	CCLOG(@"%@", koboldTouchVersion());
 
 	// Setup director
 	director = (CCDirectorIOS*)[CCDirector sharedDirector];
-	director.animationInterval = 1.0f / config.maxFrameRate;
 	director.wantsFullScreenLayout = !config.enableStatusBar;
-	[[UIAccelerometer sharedAccelerometer] setUpdateInterval:director.animationInterval];
 	director.displayStats = config.displayFPS;
+	director.animationInterval = 1.0f / config.maxFrameRate;
+	[[UIAccelerometer sharedAccelerometer] setUpdateInterval:director.animationInterval];
+	
 	// attach the OpenGLView
 	director.view = glView;
 	
@@ -312,48 +340,14 @@
 		[director setProjection:kCCDirectorProjection2D];
 	}
 	
-	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
-	[CCTexture2D setDefaultAlphaPixelFormat:config.defaultTexturePixelFormat];
-	
 	// this must be called right AFTER the glView has been attached to the director!
 	BOOL usesRetina = [director enableRetinaDisplay:config.enableRetinaDisplaySupport];
 	NSLog(@"Retina Display enabled: %@", usesRetina ? @"YES" : @"NO");
 	LOG_EXPR(isWidescreenEnabled());
 
+	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
+	[CCTexture2D setDefaultAlphaPixelFormat:config.defaultTexturePixelFormat];
 
-	/*
-	// viewController's view will be the Director's glView, unless an alternate View is available
-	UIView* alternateView = [[self alternateView] retain];
-	if (alternateView)
-	{
-		rootViewController.view = alternateView;
-		[alternateView release];
-		
-		// rootViewController's view is no longer nil, in this case we must call viewDidLoad manually
-		[rootViewController viewDidLoad];
-	}
-	*/
-
-	// by letting the viewController.view property be nil up to this point we follow Apple's normal procedure of having
-	// the viewController's loadView method add the Director's glView via loadView. Failing to do so will not call viewDidLoad in the controller.
-	// See: http://stackoverflow.com/questions/1479576/viewdidload-not-called-in-subclassed-uiviewcontroller
-	//[window addSubview:rootViewController.view];
-
-	[glView setUserInteractionEnabled:config.enableUserInteraction];
-	[glView setMultipleTouchEnabled:config.enableMultiTouch];
-	
-	navController = [[KKNavigationController alloc] initWithRootViewController:director];
-	navController.navigationBarHidden = YES;
-	director.delegate = navController;
-	
-	// set the Navigation Controller as the root view controller
-	//[window addSubview:navController.view];
-	window.rootViewController = navController;
-	
-	[window makeKeyAndVisible];
-	
-	[KKHitTest sharedHitTest].isHitTesting = config.enableGLViewNodeHitTesting;
-	
 	// If the 1st suffix is not found and if fallback is enabled then fallback suffixes are going to searched. If none is found, it will try with the name without suffix.
 	// On iPad HD  : "-ipadhd", "-ipad",  "-hd"
 	// On iPad     : "-ipad", "-hd"
@@ -363,9 +357,19 @@
 	[sharedFileUtils setiPhoneRetinaDisplaySuffix:@"-hd"];		// Default on iPhone RetinaDisplay is "-hd"
 	[sharedFileUtils setiPadSuffix:@"-ipad"];					// Default on iPad is "ipad"
 	[sharedFileUtils setiPadRetinaDisplaySuffix:@"-ipadhd"];	// Default on iPad RetinaDisplay is "-ipadhd"
-	
+
 	// Assume that PVR images have premultiplied alpha
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
+
+	navController = [[KKNavigationController alloc] initWithRootViewController:director];
+	navController.navigationBarHidden = YES;
+	director.delegate = navController;
+
+	// set the Navigation Controller as the root view controller
+	window.rootViewController = navController;
+	[window makeKeyAndVisible];
+	
+	[KKHitTest sharedHitTest].isHitTesting = config.enableGLViewNodeHitTesting;
 	
 	return YES;
 }
@@ -398,6 +402,7 @@
 {
 	if (navController.visibleViewController == director)
 	{
+		[[KKInput sharedInput] resetInputStates];
 		[director startAnimation];
 	}
 }
@@ -459,9 +464,6 @@
 		[director setProjection:kCCDirectorProjection2D];
 	}
 
-	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
-	[CCTexture2D setDefaultAlphaPixelFormat:config.defaultTexturePixelFormat];
-
 	[window setAcceptsMouseMovedEvents:config.acceptsMouseMovedEvents];
 
 	NSWindow* alternateView = [[self alternateView] retain];
@@ -476,6 +478,7 @@
 	CCLOG(@"cocos2d: window frame: origin {%.0f, %.0f}, size {%.0f, %.0f}", 
 		  [window frame].origin.x, [window frame].origin.y, [window frame].size.width, [window frame].size.height);
 
+	[[KKInput sharedInput] resetInputStates];
 	[self createGameController];
 	[self initializationComplete];
 	[self tryToRunFirstScene];

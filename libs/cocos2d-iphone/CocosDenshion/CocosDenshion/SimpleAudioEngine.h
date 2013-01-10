@@ -71,14 +71,6 @@
 /** returns whether or not the background music is playing */
 -(BOOL) isBackgroundMusicPlaying;
 
-/** Set the callback object and selector that should run when the background music track has stopped playing. Use this to play different music tracks in sequence. */
--(void) setBackgroundMusicCompletionListener:(id) listener selector:(SEL) selector;
-
-/** Does what it says :) */
-- (void)pauseAllEffects;
-/** Does what it says :) */
-- (void)resumeAllEffects;
-
 /** plays an audio effect with a file path*/
 -(ALuint) playEffect:(NSString*) filePath;
 /** stop a sound that is playing, note you must pass in the soundId that is returned when you started playing the sound with playEffect */

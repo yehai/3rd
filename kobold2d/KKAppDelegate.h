@@ -22,7 +22,7 @@
 @interface KKNavigationController : UINavigationController <CCDirectorDelegate>
 @end
 
-@interface KKAppDelegate : NSObject <UIApplicationDelegate, CCDirectorDelegate>
+@interface KKAppDelegate : UINavigationController <UIApplicationDelegate, CCDirectorDelegate>
 {
 @protected
 	UIWindow* window;

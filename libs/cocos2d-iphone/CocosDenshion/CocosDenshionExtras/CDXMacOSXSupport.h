@@ -189,7 +189,7 @@ enum {
 	id<AVAudioSessionDelegate> delegate;
 
 @private
-    void *_impl;
+    __strong void *_impl;
 }
 
 /* returns singleton instance */

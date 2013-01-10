@@ -404,7 +404,7 @@ typedef enum
 
 - (void) onExit
 {
-    [[CCScheduler sharedScheduler] unscheduleAllSelectorsForTarget: self];
+    [[CCScheduler sharedScheduler] unscheduleAllForTarget: self];
     [super onExit];
 }
 

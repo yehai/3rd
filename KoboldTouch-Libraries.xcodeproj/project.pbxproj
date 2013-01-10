@@ -25,6 +25,10 @@
 		DC0C8CB715A611DC00AB518F /* CCSchedulerExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC0C8CB415A611DC00AB518F /* CCSchedulerExtensions.h */; };
 		DC0C8CB815A611DC00AB518F /* CCSchedulerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0C8CB515A611DC00AB518F /* CCSchedulerExtensions.m */; };
 		DC0C8CB915A611DC00AB518F /* CCSchedulerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0C8CB515A611DC00AB518F /* CCSchedulerExtensions.m */; };
+		DC1773CB1695C68400DCCE0D /* KTCCScene.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1773C91695C68400DCCE0D /* KTCCScene.h */; };
+		DC1773CC1695C68400DCCE0D /* KTCCScene.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1773C91695C68400DCCE0D /* KTCCScene.h */; };
+		DC1773CD1695C68400DCCE0D /* KTCCScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1773CA1695C68400DCCE0D /* KTCCScene.m */; };
+		DC1773CE1695C68400DCCE0D /* KTCCScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1773CA1695C68400DCCE0D /* KTCCScene.m */; };
 		DC1812491615D07E001D4533 /* KTSpriteViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1812471615D07E001D4533 /* KTSpriteViewController.h */; };
 		DC18124A1615D07E001D4533 /* KTSpriteViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1812471615D07E001D4533 /* KTSpriteViewController.h */; };
 		DC18124B1615D07E001D4533 /* KTSpriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1812481615D07E001D4533 /* KTSpriteViewController.m */; };
@@ -383,6 +387,30 @@
 		DC2AE23F163C435900F2B1BD /* KTMotionDelegateWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AE23C163C435900F2B1BD /* KTMotionDelegateWrapper.h */; };
 		DC2AE240163C435900F2B1BD /* KTMotionDelegateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AE23D163C435900F2B1BD /* KTMotionDelegateWrapper.m */; };
 		DC2AE241163C435900F2B1BD /* KTMotionDelegateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AE23D163C435900F2B1BD /* KTMotionDelegateWrapper.m */; };
+		DC2BA117169DD055000A17A1 /* CCClippingNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA10B169DD055000A17A1 /* CCClippingNode.h */; };
+		DC2BA118169DD055000A17A1 /* CCClippingNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA10B169DD055000A17A1 /* CCClippingNode.h */; };
+		DC2BA119169DD055000A17A1 /* CCClippingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA10C169DD055000A17A1 /* CCClippingNode.m */; };
+		DC2BA11A169DD055000A17A1 /* CCClippingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA10C169DD055000A17A1 /* CCClippingNode.m */; };
+		DC2BA11B169DD055000A17A1 /* CCDrawNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA10D169DD055000A17A1 /* CCDrawNode.h */; };
+		DC2BA11C169DD055000A17A1 /* CCDrawNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA10D169DD055000A17A1 /* CCDrawNode.h */; };
+		DC2BA11D169DD055000A17A1 /* CCDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA10E169DD055000A17A1 /* CCDrawNode.m */; };
+		DC2BA11E169DD055000A17A1 /* CCDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA10E169DD055000A17A1 /* CCDrawNode.m */; };
+		DC2BA11F169DD055000A17A1 /* ccFPSImages.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA10F169DD055000A17A1 /* ccFPSImages.h */; };
+		DC2BA120169DD055000A17A1 /* ccFPSImages.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA10F169DD055000A17A1 /* ccFPSImages.h */; };
+		DC2BA121169DD055000A17A1 /* ccFPSImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA110169DD055000A17A1 /* ccFPSImages.m */; };
+		DC2BA122169DD055000A17A1 /* ccFPSImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA110169DD055000A17A1 /* ccFPSImages.m */; };
+		DC2BA123169DD055000A17A1 /* CCPhysicsDebugNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA111169DD055000A17A1 /* CCPhysicsDebugNode.h */; };
+		DC2BA124169DD055000A17A1 /* CCPhysicsDebugNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA111169DD055000A17A1 /* CCPhysicsDebugNode.h */; };
+		DC2BA125169DD055000A17A1 /* CCPhysicsDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA112169DD055000A17A1 /* CCPhysicsDebugNode.m */; };
+		DC2BA126169DD055000A17A1 /* CCPhysicsDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA112169DD055000A17A1 /* CCPhysicsDebugNode.m */; };
+		DC2BA127169DD055000A17A1 /* CCPhysicsSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA113169DD055000A17A1 /* CCPhysicsSprite.h */; };
+		DC2BA128169DD055000A17A1 /* CCPhysicsSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA113169DD055000A17A1 /* CCPhysicsSprite.h */; };
+		DC2BA129169DD055000A17A1 /* CCPhysicsSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA114169DD055000A17A1 /* CCPhysicsSprite.mm */; };
+		DC2BA12A169DD055000A17A1 /* CCPhysicsSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA114169DD055000A17A1 /* CCPhysicsSprite.mm */; };
+		DC2BA12B169DD055000A17A1 /* ccShader_PositionColorLengthTexture_frag.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA115169DD055000A17A1 /* ccShader_PositionColorLengthTexture_frag.h */; };
+		DC2BA12C169DD055000A17A1 /* ccShader_PositionColorLengthTexture_frag.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA115169DD055000A17A1 /* ccShader_PositionColorLengthTexture_frag.h */; };
+		DC2BA12D169DD055000A17A1 /* ccShader_PositionColorLengthTexture_vert.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA116169DD055000A17A1 /* ccShader_PositionColorLengthTexture_vert.h */; };
+		DC2BA12E169DD055000A17A1 /* ccShader_PositionColorLengthTexture_vert.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2BA116169DD055000A17A1 /* ccShader_PositionColorLengthTexture_vert.h */; };
 		DC2FD1881632F1DB002E584E /* KTLabelViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2FD1861632F1DB002E584E /* KTLabelViewController.h */; };
 		DC2FD1891632F1DB002E584E /* KTLabelViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2FD1861632F1DB002E584E /* KTLabelViewController.h */; };
 		DC2FD18A1632F1DB002E584E /* KTLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2FD1871632F1DB002E584E /* KTLabelViewController.m */; };
@@ -403,6 +431,10 @@
 		DC53B8C71438F11700EBF5A5 /* KKHitTest.h in Headers */ = {isa = PBXBuildFile; fileRef = DC53B8C41438F11700EBF5A5 /* KKHitTest.h */; };
 		DC53B8C81438F11700EBF5A5 /* KKHitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC53B8C51438F11700EBF5A5 /* KKHitTest.m */; };
 		DC53B8C91438F11700EBF5A5 /* KKHitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC53B8C51438F11700EBF5A5 /* KKHitTest.m */; };
+		DC5D27AC1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.h in Headers */ = {isa = PBXBuildFile; fileRef = DC5D27AA1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.h */; };
+		DC5D27AD1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.h in Headers */ = {isa = PBXBuildFile; fileRef = DC5D27AA1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.h */; };
+		DC5D27AE1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5D27AB1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.m */; };
+		DC5D27AF1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5D27AB1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.m */; };
 		DC603449142928A800CA7BFE /* KKDeviceMotion.h in Headers */ = {isa = PBXBuildFile; fileRef = DC603447142928A700CA7BFE /* KKDeviceMotion.h */; };
 		DC60344A142928A800CA7BFE /* KKDeviceMotion.h in Headers */ = {isa = PBXBuildFile; fileRef = DC603447142928A700CA7BFE /* KKDeviceMotion.h */; };
 		DC60344B142928A800CA7BFE /* KKDeviceMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = DC603448142928A700CA7BFE /* KKDeviceMotion.m */; };
@@ -539,6 +571,30 @@
 		DCA37DC016133B4500F207E0 /* KTSpriteBatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA37DBC16133B4500F207E0 /* KTSpriteBatchViewController.m */; };
 		DCBEBA8715160AD300D454AC /* KKInputEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = DCBEBA8615160AD300D454AC /* KKInputEnums.h */; };
 		DCBEBA8815160AD300D454AC /* KKInputEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = DCBEBA8615160AD300D454AC /* KKInputEnums.h */; };
+		DCC1EE8F16834CF700893104 /* KTTilemapLayerModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EE8D16834CF700893104 /* KTTilemapLayerModel.h */; };
+		DCC1EE9016834CF700893104 /* KTTilemapLayerModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EE8D16834CF700893104 /* KTTilemapLayerModel.h */; };
+		DCC1EE9116834CF700893104 /* KTTilemapLayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EE8E16834CF700893104 /* KTTilemapLayerModel.m */; };
+		DCC1EE9216834CF700893104 /* KTTilemapLayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EE8E16834CF700893104 /* KTTilemapLayerModel.m */; };
+		DCC1EE961683614100893104 /* KTTilemapTileset.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EE941683614100893104 /* KTTilemapTileset.h */; };
+		DCC1EE971683614100893104 /* KTTilemapTileset.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EE941683614100893104 /* KTTilemapTileset.h */; };
+		DCC1EE981683614100893104 /* KTTilemapTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EE951683614100893104 /* KTTilemapTileset.m */; };
+		DCC1EE991683614100893104 /* KTTilemapTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EE951683614100893104 /* KTTilemapTileset.m */; };
+		DCC1EE9C1683623500893104 /* KTTilemapLayerTiles.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EE9A1683623500893104 /* KTTilemapLayerTiles.h */; };
+		DCC1EE9D1683623500893104 /* KTTilemapLayerTiles.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EE9A1683623500893104 /* KTTilemapLayerTiles.h */; };
+		DCC1EE9E1683623500893104 /* KTTilemapLayerTiles.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EE9B1683623500893104 /* KTTilemapLayerTiles.m */; };
+		DCC1EE9F1683623500893104 /* KTTilemapLayerTiles.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EE9B1683623500893104 /* KTTilemapLayerTiles.m */; };
+		DCC1EEA2168362C600893104 /* KTTilemapLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EEA0168362C600893104 /* KTTilemapLayer.h */; };
+		DCC1EEA3168362C600893104 /* KTTilemapLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EEA0168362C600893104 /* KTTilemapLayer.h */; };
+		DCC1EEA4168362C600893104 /* KTTilemapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EEA1168362C600893104 /* KTTilemapLayer.m */; };
+		DCC1EEA5168362C600893104 /* KTTilemapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EEA1168362C600893104 /* KTTilemapLayer.m */; };
+		DCC1EEA81683635A00893104 /* KTTilemapObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EEA61683635A00893104 /* KTTilemapObject.h */; };
+		DCC1EEA91683635A00893104 /* KTTilemapObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EEA61683635A00893104 /* KTTilemapObject.h */; };
+		DCC1EEAA1683635A00893104 /* KTTilemapObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EEA71683635A00893104 /* KTTilemapObject.m */; };
+		DCC1EEAB1683635A00893104 /* KTTilemapObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EEA71683635A00893104 /* KTTilemapObject.m */; };
+		DCC1EEAE168363E400893104 /* KTTMXParser.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EEAC168363E300893104 /* KTTMXParser.h */; };
+		DCC1EEAF168363E400893104 /* KTTMXParser.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EEAC168363E300893104 /* KTTMXParser.h */; };
+		DCC1EEB0168363E400893104 /* KTTMXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EEAD168363E400893104 /* KTTMXParser.m */; };
+		DCC1EEB1168363E400893104 /* KTTMXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EEAD168363E400893104 /* KTTMXParser.m */; };
 		DCC29E3814CB03380035B0B5 /* Box2D.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC29DD614CB03380035B0B5 /* Box2D.h */; };
 		DCC29E3914CB03380035B0B5 /* Box2D.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC29DD614CB03380035B0B5 /* Box2D.h */; };
 		DCC29E3A14CB03380035B0B5 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCC29DD814CB03380035B0B5 /* b2BroadPhase.cpp */; };
@@ -795,20 +851,24 @@
 		DCDD519813A919C200EC4F3A /* CDXPropertyModifierAction.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDD511813A919C200EC4F3A /* CDXPropertyModifierAction.h */; };
 		DCDD519913A919C200EC4F3A /* CDXPropertyModifierAction.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDD511813A919C200EC4F3A /* CDXPropertyModifierAction.h */; };
 		DCDD519B13A919C200EC4F3A /* CDXPropertyModifierAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDD511913A919C200EC4F3A /* CDXPropertyModifierAction.m */; };
+		DCE38597168B2F65000AD309 /* CCNode+Autoscale.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE38595168B2F65000AD309 /* CCNode+Autoscale.h */; };
+		DCE38598168B2F65000AD309 /* CCNode+Autoscale.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE38595168B2F65000AD309 /* CCNode+Autoscale.h */; };
+		DCE38599168B2F65000AD309 /* CCNode+Autoscale.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE38596168B2F65000AD309 /* CCNode+Autoscale.m */; };
+		DCE3859A168B2F65000AD309 /* CCNode+Autoscale.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE38596168B2F65000AD309 /* CCNode+Autoscale.m */; };
+		DCE3859D168B2FFB000AD309 /* KTAutoscaleController.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE3859B168B2FFB000AD309 /* KTAutoscaleController.h */; };
+		DCE3859E168B2FFB000AD309 /* KTAutoscaleController.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE3859B168B2FFB000AD309 /* KTAutoscaleController.h */; };
+		DCE3859F168B2FFB000AD309 /* KTAutoscaleController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE3859C168B2FFB000AD309 /* KTAutoscaleController.m */; };
+		DCE385A0168B2FFB000AD309 /* KTAutoscaleController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE3859C168B2FFB000AD309 /* KTAutoscaleController.m */; };
+		DCE385A3168B31D8000AD309 /* KTAutoscaleNodeProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE385A1168B31D8000AD309 /* KTAutoscaleNodeProxy.h */; };
+		DCE385A4168B31D8000AD309 /* KTAutoscaleNodeProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE385A1168B31D8000AD309 /* KTAutoscaleNodeProxy.h */; };
+		DCE385A5168B31D8000AD309 /* KTAutoscaleNodeProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE385A2168B31D8000AD309 /* KTAutoscaleNodeProxy.m */; };
+		DCE385A6168B31D8000AD309 /* KTAutoscaleNodeProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE385A2168B31D8000AD309 /* KTAutoscaleNodeProxy.m */; };
 		DCE4E8C113FBFEE000F55853 /* CCBigImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4E89313FBFEE000F55853 /* CCBigImage.h */; };
 		DCE4E8C213FBFEE000F55853 /* CCBigImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4E89313FBFEE000F55853 /* CCBigImage.h */; };
 		DCE4E8C313FBFEE000F55853 /* CCBigImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4E89413FBFEE000F55853 /* CCBigImage.m */; };
 		DCE4E8C413FBFEE000F55853 /* CCBigImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4E89413FBFEE000F55853 /* CCBigImage.m */; };
 		DCE4E8C513FBFEE000F55853 /* CCTextureCache+CCBigImageExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4E89513FBFEE000F55853 /* CCTextureCache+CCBigImageExtensions.h */; };
 		DCE4E8C713FBFEE000F55853 /* CCTextureCache+CCBigImageExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4E89613FBFEE000F55853 /* CCTextureCache+CCBigImageExtensions.m */; };
-		DCE4E8C913FBFEE000F55853 /* CCMenuAdvanced.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4E89913FBFEE000F55853 /* CCMenuAdvanced.h */; };
-		DCE4E8CA13FBFEE000F55853 /* CCMenuAdvanced.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4E89913FBFEE000F55853 /* CCMenuAdvanced.h */; };
-		DCE4E8CB13FBFEE000F55853 /* CCMenuAdvanced.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4E89A13FBFEE000F55853 /* CCMenuAdvanced.m */; };
-		DCE4E8CC13FBFEE000F55853 /* CCMenuAdvanced.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4E89A13FBFEE000F55853 /* CCMenuAdvanced.m */; };
-		DCE4E8CD13FBFEE000F55853 /* CCMenuItemSpriteIndependent.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4E89D13FBFEE000F55853 /* CCMenuItemSpriteIndependent.h */; };
-		DCE4E8CE13FBFEE000F55853 /* CCMenuItemSpriteIndependent.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4E89D13FBFEE000F55853 /* CCMenuItemSpriteIndependent.h */; };
-		DCE4E8CF13FBFEE000F55853 /* CCMenuItemSpriteIndependent.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4E89E13FBFEE000F55853 /* CCMenuItemSpriteIndependent.m */; };
-		DCE4E8D013FBFEE000F55853 /* CCMenuItemSpriteIndependent.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4E89E13FBFEE000F55853 /* CCMenuItemSpriteIndependent.m */; };
 		DCE4E8D113FBFEE000F55853 /* CCScrollLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4E8A113FBFEE000F55853 /* CCScrollLayer.h */; };
 		DCE4E8D213FBFEE000F55853 /* CCScrollLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4E8A113FBFEE000F55853 /* CCScrollLayer.h */; };
 		DCE4E8D313FBFEE000F55853 /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4E8A213FBFEE000F55853 /* CCScrollLayer.m */; };
@@ -1195,6 +1255,8 @@
 		DC0C8CB415A611DC00AB518F /* CCSchedulerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSchedulerExtensions.h; sourceTree = "<group>"; };
 		DC0C8CB515A611DC00AB518F /* CCSchedulerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSchedulerExtensions.m; sourceTree = "<group>"; };
 		DC10FA7B146ED4D900E83C1D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		DC1773C91695C68400DCCE0D /* KTCCScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTCCScene.h; sourceTree = "<group>"; };
+		DC1773CA1695C68400DCCE0D /* KTCCScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTCCScene.m; sourceTree = "<group>"; };
 		DC1812471615D07E001D4533 /* KTSpriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSpriteViewController.h; sourceTree = "<group>"; };
 		DC1812481615D07E001D4533 /* KTSpriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSpriteViewController.m; sourceTree = "<group>"; };
 		DC1812511615E3BF001D4533 /* KTPhysicsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPhysicsController.h; sourceTree = "<group>"; };
@@ -1382,6 +1444,18 @@
 		DC2AE237163C330600F2B1BD /* KTMotionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTMotionController.m; sourceTree = "<group>"; };
 		DC2AE23C163C435900F2B1BD /* KTMotionDelegateWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTMotionDelegateWrapper.h; sourceTree = "<group>"; };
 		DC2AE23D163C435900F2B1BD /* KTMotionDelegateWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTMotionDelegateWrapper.m; sourceTree = "<group>"; };
+		DC2BA10B169DD055000A17A1 /* CCClippingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCClippingNode.h; sourceTree = "<group>"; };
+		DC2BA10C169DD055000A17A1 /* CCClippingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCClippingNode.m; sourceTree = "<group>"; };
+		DC2BA10D169DD055000A17A1 /* CCDrawNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDrawNode.h; sourceTree = "<group>"; };
+		DC2BA10E169DD055000A17A1 /* CCDrawNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDrawNode.m; sourceTree = "<group>"; };
+		DC2BA10F169DD055000A17A1 /* ccFPSImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccFPSImages.h; sourceTree = "<group>"; };
+		DC2BA110169DD055000A17A1 /* ccFPSImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ccFPSImages.m; sourceTree = "<group>"; };
+		DC2BA111169DD055000A17A1 /* CCPhysicsDebugNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPhysicsDebugNode.h; sourceTree = "<group>"; };
+		DC2BA112169DD055000A17A1 /* CCPhysicsDebugNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPhysicsDebugNode.m; sourceTree = "<group>"; };
+		DC2BA113169DD055000A17A1 /* CCPhysicsSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPhysicsSprite.h; sourceTree = "<group>"; };
+		DC2BA114169DD055000A17A1 /* CCPhysicsSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCPhysicsSprite.mm; sourceTree = "<group>"; };
+		DC2BA115169DD055000A17A1 /* ccShader_PositionColorLengthTexture_frag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccShader_PositionColorLengthTexture_frag.h; sourceTree = "<group>"; };
+		DC2BA116169DD055000A17A1 /* ccShader_PositionColorLengthTexture_vert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccShader_PositionColorLengthTexture_vert.h; sourceTree = "<group>"; };
 		DC2FD1861632F1DB002E584E /* KTLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTLabelViewController.h; sourceTree = "<group>"; };
 		DC2FD1871632F1DB002E584E /* KTLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTLabelViewController.m; sourceTree = "<group>"; };
 		DC32A49416176E650055315E /* KTDebugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTDebugController.h; sourceTree = "<group>"; };
@@ -1392,6 +1466,8 @@
 		DC4108B8142548F800FDF467 /* KKRotationRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKRotationRate.m; sourceTree = "<group>"; };
 		DC53B8C41438F11700EBF5A5 /* KKHitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKHitTest.h; sourceTree = "<group>"; };
 		DC53B8C51438F11700EBF5A5 /* KKHitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKHitTest.m; sourceTree = "<group>"; };
+		DC5D27AA1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSpriteBatchNode+Autoscale.h"; sourceTree = "<group>"; };
+		DC5D27AB1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSpriteBatchNode+Autoscale.m"; sourceTree = "<group>"; };
 		DC603447142928A700CA7BFE /* KKDeviceMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKDeviceMotion.h; sourceTree = "<group>"; };
 		DC603448142928A700CA7BFE /* KKDeviceMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKDeviceMotion.m; sourceTree = "<group>"; };
 		DC6E1BCE1424CB4B00E32230 /* KKInputMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKInputMotion.h; sourceTree = "<group>"; };
@@ -1476,6 +1552,18 @@
 		DCB7C163144F0795000BA956 /* kkARCSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kkARCSupport.h; sourceTree = "<group>"; };
 		DCBEBA8615160AD300D454AC /* KKInputEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKInputEnums.h; sourceTree = "<group>"; };
 		DCC18D3E13A9F41000FBEB68 /* HeaderSearchPaths.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HeaderSearchPaths.xcconfig; sourceTree = "<group>"; };
+		DCC1EE8D16834CF700893104 /* KTTilemapLayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapLayerModel.h; sourceTree = "<group>"; };
+		DCC1EE8E16834CF700893104 /* KTTilemapLayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapLayerModel.m; sourceTree = "<group>"; };
+		DCC1EE941683614100893104 /* KTTilemapTileset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapTileset.h; sourceTree = "<group>"; };
+		DCC1EE951683614100893104 /* KTTilemapTileset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapTileset.m; sourceTree = "<group>"; };
+		DCC1EE9A1683623500893104 /* KTTilemapLayerTiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapLayerTiles.h; sourceTree = "<group>"; };
+		DCC1EE9B1683623500893104 /* KTTilemapLayerTiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapLayerTiles.m; sourceTree = "<group>"; };
+		DCC1EEA0168362C600893104 /* KTTilemapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapLayer.h; sourceTree = "<group>"; };
+		DCC1EEA1168362C600893104 /* KTTilemapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapLayer.m; sourceTree = "<group>"; };
+		DCC1EEA61683635A00893104 /* KTTilemapObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapObject.h; sourceTree = "<group>"; };
+		DCC1EEA71683635A00893104 /* KTTilemapObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapObject.m; sourceTree = "<group>"; };
+		DCC1EEAC168363E300893104 /* KTTMXParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTMXParser.h; sourceTree = "<group>"; };
+		DCC1EEAD168363E400893104 /* KTTMXParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTMXParser.m; sourceTree = "<group>"; };
 		DCC29DD614CB03380035B0B5 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Box2D.h; path = libs/Box2D/Box2D/Box2D.h; sourceTree = SOURCE_ROOT; };
 		DCC29DD814CB03380035B0B5 /* b2BroadPhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BroadPhase.cpp; sourceTree = "<group>"; };
 		DCC29DD914CB03380035B0B5 /* b2BroadPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2BroadPhase.h; sourceTree = "<group>"; };
@@ -1612,6 +1700,12 @@
 		DCDD511913A919C200EC4F3A /* CDXPropertyModifierAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDXPropertyModifierAction.m; sourceTree = "<group>"; };
 		DCDD527D13A91BC200EC4F3A /* libbox2d-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libbox2d-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDD528913A91BCB00EC4F3A /* libbox2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libbox2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCE38595168B2F65000AD309 /* CCNode+Autoscale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+Autoscale.h"; sourceTree = "<group>"; };
+		DCE38596168B2F65000AD309 /* CCNode+Autoscale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+Autoscale.m"; sourceTree = "<group>"; };
+		DCE3859B168B2FFB000AD309 /* KTAutoscaleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTAutoscaleController.h; sourceTree = "<group>"; };
+		DCE3859C168B2FFB000AD309 /* KTAutoscaleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTAutoscaleController.m; sourceTree = "<group>"; };
+		DCE385A1168B31D8000AD309 /* KTAutoscaleNodeProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTAutoscaleNodeProxy.h; sourceTree = "<group>"; };
+		DCE385A2168B31D8000AD309 /* KTAutoscaleNodeProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTAutoscaleNodeProxy.m; sourceTree = "<group>"; };
 		DCE4E89313FBFEE000F55853 /* CCBigImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBigImage.h; sourceTree = "<group>"; };
 		DCE4E89413FBFEE000F55853 /* CCBigImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBigImage.m; sourceTree = "<group>"; };
 		DCE4E89513FBFEE000F55853 /* CCTextureCache+CCBigImageExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCTextureCache+CCBigImageExtensions.h"; sourceTree = "<group>"; };
@@ -1988,9 +2082,21 @@
 			name = "Kobold2D Input";
 			sourceTree = "<group>";
 		};
+		DC1773C71695C65C00DCCE0D /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				DC2724CE160E4BC600D88944 /* KTSceneViewController.h */,
+				DC2724CF160E4BC600D88944 /* KTSceneViewController.m */,
+				DC1773C91695C68400DCCE0D /* KTCCScene.h */,
+				DC1773CA1695C68400DCCE0D /* KTCCScene.m */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
 		DC1812501615E363001D4533 /* Scene Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DCE3857E168B195B000AD309 /* Autoscale */,
 				DCF0842016394244002CBA34 /* Input */,
 				DC1812631615E536001D4533 /* Physics */,
 				DC87CD511617318600F03D9F /* Physics Debug View Controllers */,
@@ -2136,7 +2242,7 @@
 			path = GL;
 			sourceTree = "<group>";
 		};
-		DC20FF00150FFEF3005AF897 /* New Classes in cocos2d 2.x */ = {
+		DC20FF00150FFEF3005AF897 /* New in cocos2d 2.0 */ = {
 			isa = PBXGroup;
 			children = (
 				DCECE81915921B07002A4C65 /* CCNode+Debug.h */,
@@ -2155,7 +2261,7 @@
 				DC20FFAB15100F61005AF897 /* ccShaders.h */,
 				DC20FFAC15100F61005AF897 /* ccShaders.m */,
 			);
-			name = "New Classes in cocos2d 2.x";
+			name = "New in cocos2d 2.0";
 			sourceTree = "<group>";
 		};
 		DC20FFDD15100F7D005AF897 /* Built-In Shaders */ = {
@@ -2188,7 +2294,7 @@
 				DC915A111631B39D0024064A /* KTVersion.m */,
 				DCF89D541627124400E417F5 /* Categories */,
 				DC2725401610F2B200D88944 /* Protocols, Enums, Macros, etc */,
-				DC2725321610F0AD00D88944 /* Base Classes */,
+				DC2725321610F0AD00D88944 /* Controller & Model Base Classes */,
 				DC27253F1610F29400D88944 /* Game Controllers */,
 				DC1812501615E363001D4533 /* Scene Controllers */,
 				DC2724D4160E4BC900D88944 /* View Controllers */,
@@ -2203,15 +2309,14 @@
 			children = (
 				DC2724C8160E4BA600D88944 /* KTViewController.h */,
 				DC2724C9160E4BA600D88944 /* KTViewController.m */,
-				DC2724CE160E4BC600D88944 /* KTSceneViewController.h */,
-				DC2724CF160E4BC600D88944 /* KTSceneViewController.m */,
+				DC1773C71695C65C00DCCE0D /* Scene */,
 				DCF0842F1639AE91002CBA34 /* Cocos2D Views */,
 				DC912CDB16298D5300AD381F /* Tilemap */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		DC2725321610F0AD00D88944 /* Base Classes */ = {
+		DC2725321610F0AD00D88944 /* Controller & Model Base Classes */ = {
 			isa = PBXGroup;
 			children = (
 				DC2725601611D12300D88944 /* KTModelControllerBase.h */,
@@ -2221,7 +2326,7 @@
 				DC2725331610F0D000D88944 /* KTModel.h */,
 				DC2725341610F0D000D88944 /* KTModel.m */,
 			);
-			name = "Base Classes";
+			name = "Controller & Model Base Classes";
 			sourceTree = "<group>";
 		};
 		DC27253F1610F29400D88944 /* Game Controllers */ = {
@@ -2337,6 +2442,25 @@
 				DC2AE231163C169500F2B1BD /* KTColorGradientViewController.m */,
 			);
 			name = ColorGradient;
+			sourceTree = "<group>";
+		};
+		DC2BA130169DD062000A17A1 /* New in cocos2d 2.1 */ = {
+			isa = PBXGroup;
+			children = (
+				DC2BA10B169DD055000A17A1 /* CCClippingNode.h */,
+				DC2BA10C169DD055000A17A1 /* CCClippingNode.m */,
+				DC2BA10D169DD055000A17A1 /* CCDrawNode.h */,
+				DC2BA10E169DD055000A17A1 /* CCDrawNode.m */,
+				DC2BA10F169DD055000A17A1 /* ccFPSImages.h */,
+				DC2BA110169DD055000A17A1 /* ccFPSImages.m */,
+				DC2BA111169DD055000A17A1 /* CCPhysicsDebugNode.h */,
+				DC2BA112169DD055000A17A1 /* CCPhysicsDebugNode.m */,
+				DC2BA113169DD055000A17A1 /* CCPhysicsSprite.h */,
+				DC2BA114169DD055000A17A1 /* CCPhysicsSprite.mm */,
+				DC2BA115169DD055000A17A1 /* ccShader_PositionColorLengthTexture_frag.h */,
+				DC2BA116169DD055000A17A1 /* ccShader_PositionColorLengthTexture_vert.h */,
+			);
+			name = "New in cocos2d 2.1";
 			sourceTree = "<group>";
 		};
 		DC2FD1821632F196002E584E /* Sprite */ = {
@@ -2462,18 +2586,14 @@
 		DC912CDB16298D5300AD381F /* Tilemap */ = {
 			isa = PBXGroup;
 			children = (
+				DCC1EE931683611100893104 /* TMX Loader */,
+				DCC1EE8C16834C9900893104 /* Tile Layer */,
 				DC912CDE16298DBB00AD381F /* KTTilemapViewController.h */,
 				DC912CDF16298DBB00AD381F /* KTTilemapViewController.m */,
-				DC915A201632D0670024064A /* KTTilemapLayerViewController.h */,
-				DC915A211632D0670024064A /* KTTilemapLayerViewController.m */,
-				DCC86660167B82A700E982B1 /* KTTilemapObjectViewController.h */,
-				DCC86661167B82A700E982B1 /* KTTilemapObjectViewController.m */,
 				DC912CDC16298DBB00AD381F /* KTTilemapModel.h */,
 				DC912CDD16298DBB00AD381F /* KTTilemapModel.m */,
-				DC912CE8162992E400AD381F /* KTTilemap.h */,
-				DC912CE9162992E400AD381F /* KTTilemap.m */,
-				DCC8666D167BA17900E982B1 /* KTTilemapLayerView.h */,
-				DCC8666E167BA17900E982B1 /* KTTilemapLayerView.m */,
+				DCC86660167B82A700E982B1 /* KTTilemapObjectViewController.h */,
+				DCC86661167B82A700E982B1 /* KTTilemapObjectViewController.m */,
 			);
 			name = Tilemap;
 			sourceTree = "<group>";
@@ -2559,6 +2679,38 @@
 			);
 			name = BuildSettings;
 			path = buildsettings;
+			sourceTree = "<group>";
+		};
+		DCC1EE8C16834C9900893104 /* Tile Layer */ = {
+			isa = PBXGroup;
+			children = (
+				DC915A201632D0670024064A /* KTTilemapLayerViewController.h */,
+				DC915A211632D0670024064A /* KTTilemapLayerViewController.m */,
+				DCC8666D167BA17900E982B1 /* KTTilemapLayerView.h */,
+				DCC8666E167BA17900E982B1 /* KTTilemapLayerView.m */,
+				DCC1EE8D16834CF700893104 /* KTTilemapLayerModel.h */,
+				DCC1EE8E16834CF700893104 /* KTTilemapLayerModel.m */,
+			);
+			name = "Tile Layer";
+			sourceTree = "<group>";
+		};
+		DCC1EE931683611100893104 /* TMX Loader */ = {
+			isa = PBXGroup;
+			children = (
+				DC912CE8162992E400AD381F /* KTTilemap.h */,
+				DC912CE9162992E400AD381F /* KTTilemap.m */,
+				DCC1EE941683614100893104 /* KTTilemapTileset.h */,
+				DCC1EE951683614100893104 /* KTTilemapTileset.m */,
+				DCC1EEA0168362C600893104 /* KTTilemapLayer.h */,
+				DCC1EEA1168362C600893104 /* KTTilemapLayer.m */,
+				DCC1EE9A1683623500893104 /* KTTilemapLayerTiles.h */,
+				DCC1EE9B1683623500893104 /* KTTilemapLayerTiles.m */,
+				DCC1EEA61683635A00893104 /* KTTilemapObject.h */,
+				DCC1EEA71683635A00893104 /* KTTilemapObject.m */,
+				DCC1EEAC168363E300893104 /* KTTMXParser.h */,
+				DCC1EEAD168363E400893104 /* KTTMXParser.m */,
+			);
+			name = "TMX Loader";
 			sourceTree = "<group>";
 		};
 		DCC29DD714CB03380035B0B5 /* Collision */ = {
@@ -2776,6 +2928,21 @@
 			path = "libs/cocos2d-iphone/external/Box2d/Box2D";
 			sourceTree = "<group>";
 		};
+		DCE3857E168B195B000AD309 /* Autoscale */ = {
+			isa = PBXGroup;
+			children = (
+				DCE3859B168B2FFB000AD309 /* KTAutoscaleController.h */,
+				DCE3859C168B2FFB000AD309 /* KTAutoscaleController.m */,
+				DCE385A1168B31D8000AD309 /* KTAutoscaleNodeProxy.h */,
+				DCE385A2168B31D8000AD309 /* KTAutoscaleNodeProxy.m */,
+				DCE38595168B2F65000AD309 /* CCNode+Autoscale.h */,
+				DCE38596168B2F65000AD309 /* CCNode+Autoscale.m */,
+				DC5D27AA1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.h */,
+				DC5D27AB1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.m */,
+			);
+			name = Autoscale;
+			sourceTree = "<group>";
+		};
 		DCE4E89113FBFEE000F55853 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -2945,7 +3112,8 @@
 		DCECA99513A90CAE00788FBF /* cocos2d */ = {
 			isa = PBXGroup;
 			children = (
-				DC20FF00150FFEF3005AF897 /* New Classes in cocos2d 2.x */,
+				DC2BA130169DD062000A17A1 /* New in cocos2d 2.1 */,
+				DC20FF00150FFEF3005AF897 /* New in cocos2d 2.0 */,
 				DCECAA0A13A90CAE00788FBF /* cocos2d.h */,
 				DCECAA0B13A90CAE00788FBF /* cocos2d.m */,
 				DCECA9BB13A90CAE00788FBF /* CCDirector.h */,
@@ -3317,6 +3485,17 @@
 				DC2AE23E163C435900F2B1BD /* KTMotionDelegateWrapper.h in Headers */,
 				DCC86662167B82A700E982B1 /* KTTilemapObjectViewController.h in Headers */,
 				DCC8666F167BA17900E982B1 /* KTTilemapLayerView.h in Headers */,
+				DCC1EE8F16834CF700893104 /* KTTilemapLayerModel.h in Headers */,
+				DCC1EE961683614100893104 /* KTTilemapTileset.h in Headers */,
+				DCC1EE9C1683623500893104 /* KTTilemapLayerTiles.h in Headers */,
+				DCC1EEA2168362C600893104 /* KTTilemapLayer.h in Headers */,
+				DCC1EEA81683635A00893104 /* KTTilemapObject.h in Headers */,
+				DCC1EEAE168363E400893104 /* KTTMXParser.h in Headers */,
+				DCE38597168B2F65000AD309 /* CCNode+Autoscale.h in Headers */,
+				DCE3859D168B2FFB000AD309 /* KTAutoscaleController.h in Headers */,
+				DCE385A3168B31D8000AD309 /* KTAutoscaleNodeProxy.h in Headers */,
+				DC1773CB1695C68400DCCE0D /* KTCCScene.h in Headers */,
+				DC5D27AC1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3372,6 +3551,17 @@
 				DC2AE23F163C435900F2B1BD /* KTMotionDelegateWrapper.h in Headers */,
 				DCC86663167B82A700E982B1 /* KTTilemapObjectViewController.h in Headers */,
 				DCC86670167BA17900E982B1 /* KTTilemapLayerView.h in Headers */,
+				DCC1EE9016834CF700893104 /* KTTilemapLayerModel.h in Headers */,
+				DCC1EE971683614100893104 /* KTTilemapTileset.h in Headers */,
+				DCC1EE9D1683623500893104 /* KTTilemapLayerTiles.h in Headers */,
+				DCC1EEA3168362C600893104 /* KTTilemapLayer.h in Headers */,
+				DCC1EEA91683635A00893104 /* KTTilemapObject.h in Headers */,
+				DCC1EEAF168363E400893104 /* KTTMXParser.h in Headers */,
+				DCE38598168B2F65000AD309 /* CCNode+Autoscale.h in Headers */,
+				DCE3859E168B2FFB000AD309 /* KTAutoscaleController.h in Headers */,
+				DCE385A4168B31D8000AD309 /* KTAutoscaleNodeProxy.h in Headers */,
+				DC1773CC1695C68400DCCE0D /* KTCCScene.h in Headers */,
+				DC5D27AD1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3381,8 +3571,6 @@
 			files = (
 				DCE4E8C113FBFEE000F55853 /* CCBigImage.h in Headers */,
 				DCE4E8C513FBFEE000F55853 /* CCTextureCache+CCBigImageExtensions.h in Headers */,
-				DCE4E8C913FBFEE000F55853 /* CCMenuAdvanced.h in Headers */,
-				DCE4E8CD13FBFEE000F55853 /* CCMenuItemSpriteIndependent.h in Headers */,
 				DCE4E8D113FBFEE000F55853 /* CCScrollLayer.h in Headers */,
 				DCE4E8D513FBFEE000F55853 /* CCSendMessages.h in Headers */,
 				DCE4E8D913FBFEE000F55853 /* CCSlider.h in Headers */,
@@ -3405,8 +3593,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCE4E8C213FBFEE000F55853 /* CCBigImage.h in Headers */,
-				DCE4E8CA13FBFEE000F55853 /* CCMenuAdvanced.h in Headers */,
-				DCE4E8CE13FBFEE000F55853 /* CCMenuItemSpriteIndependent.h in Headers */,
 				DCE4E8D213FBFEE000F55853 /* CCScrollLayer.h in Headers */,
 				DCE4E8D613FBFEE000F55853 /* CCSendMessages.h in Headers */,
 				DCE4E8DA13FBFEE000F55853 /* CCSlider.h in Headers */,
@@ -3837,6 +4023,13 @@
 				DC2000061510135D005AF897 /* OpenGL_Internal.h in Headers */,
 				DC073D701570F66C00711D72 /* CCActionCatmullRom.h in Headers */,
 				DCECE81B15921B07002A4C65 /* CCNode+Debug.h in Headers */,
+				DC2BA117169DD055000A17A1 /* CCClippingNode.h in Headers */,
+				DC2BA11B169DD055000A17A1 /* CCDrawNode.h in Headers */,
+				DC2BA11F169DD055000A17A1 /* ccFPSImages.h in Headers */,
+				DC2BA123169DD055000A17A1 /* CCPhysicsDebugNode.h in Headers */,
+				DC2BA127169DD055000A17A1 /* CCPhysicsSprite.h in Headers */,
+				DC2BA12B169DD055000A17A1 /* ccShader_PositionColorLengthTexture_frag.h in Headers */,
+				DC2BA12D169DD055000A17A1 /* ccShader_PositionColorLengthTexture_vert.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3965,6 +4158,13 @@
 				DC2000071510135D005AF897 /* OpenGL_Internal.h in Headers */,
 				DC073D711570F66C00711D72 /* CCActionCatmullRom.h in Headers */,
 				DCECE81C15921B07002A4C65 /* CCNode+Debug.h in Headers */,
+				DC2BA118169DD055000A17A1 /* CCClippingNode.h in Headers */,
+				DC2BA11C169DD055000A17A1 /* CCDrawNode.h in Headers */,
+				DC2BA120169DD055000A17A1 /* ccFPSImages.h in Headers */,
+				DC2BA124169DD055000A17A1 /* CCPhysicsDebugNode.h in Headers */,
+				DC2BA128169DD055000A17A1 /* CCPhysicsSprite.h in Headers */,
+				DC2BA12C169DD055000A17A1 /* ccShader_PositionColorLengthTexture_frag.h in Headers */,
+				DC2BA12E169DD055000A17A1 /* ccShader_PositionColorLengthTexture_vert.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4299,6 +4499,17 @@
 				DC2AE240163C435900F2B1BD /* KTMotionDelegateWrapper.m in Sources */,
 				DCC86664167B82A700E982B1 /* KTTilemapObjectViewController.m in Sources */,
 				DCC86671167BA17900E982B1 /* KTTilemapLayerView.m in Sources */,
+				DCC1EE9116834CF700893104 /* KTTilemapLayerModel.m in Sources */,
+				DCC1EE981683614100893104 /* KTTilemapTileset.m in Sources */,
+				DCC1EE9E1683623500893104 /* KTTilemapLayerTiles.m in Sources */,
+				DCC1EEA4168362C600893104 /* KTTilemapLayer.m in Sources */,
+				DCC1EEAA1683635A00893104 /* KTTilemapObject.m in Sources */,
+				DCC1EEB0168363E400893104 /* KTTMXParser.m in Sources */,
+				DCE38599168B2F65000AD309 /* CCNode+Autoscale.m in Sources */,
+				DCE3859F168B2FFB000AD309 /* KTAutoscaleController.m in Sources */,
+				DCE385A5168B31D8000AD309 /* KTAutoscaleNodeProxy.m in Sources */,
+				DC1773CD1695C68400DCCE0D /* KTCCScene.m in Sources */,
+				DC5D27AE1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4355,6 +4566,17 @@
 				DC2AE241163C435900F2B1BD /* KTMotionDelegateWrapper.m in Sources */,
 				DCC86665167B82A700E982B1 /* KTTilemapObjectViewController.m in Sources */,
 				DCC86672167BA17900E982B1 /* KTTilemapLayerView.m in Sources */,
+				DCC1EE9216834CF700893104 /* KTTilemapLayerModel.m in Sources */,
+				DCC1EE991683614100893104 /* KTTilemapTileset.m in Sources */,
+				DCC1EE9F1683623500893104 /* KTTilemapLayerTiles.m in Sources */,
+				DCC1EEA5168362C600893104 /* KTTilemapLayer.m in Sources */,
+				DCC1EEAB1683635A00893104 /* KTTilemapObject.m in Sources */,
+				DCC1EEB1168363E400893104 /* KTTMXParser.m in Sources */,
+				DCE3859A168B2F65000AD309 /* CCNode+Autoscale.m in Sources */,
+				DCE385A0168B2FFB000AD309 /* KTAutoscaleController.m in Sources */,
+				DCE385A6168B31D8000AD309 /* KTAutoscaleNodeProxy.m in Sources */,
+				DC1773CE1695C68400DCCE0D /* KTCCScene.m in Sources */,
+				DC5D27AF1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4364,8 +4586,6 @@
 			files = (
 				DCE4E8C313FBFEE000F55853 /* CCBigImage.m in Sources */,
 				DCE4E8C713FBFEE000F55853 /* CCTextureCache+CCBigImageExtensions.m in Sources */,
-				DCE4E8CB13FBFEE000F55853 /* CCMenuAdvanced.m in Sources */,
-				DCE4E8CF13FBFEE000F55853 /* CCMenuItemSpriteIndependent.m in Sources */,
 				DCE4E8D313FBFEE000F55853 /* CCScrollLayer.m in Sources */,
 				DCE4E8D713FBFEE000F55853 /* CCSendMessages.m in Sources */,
 				DCE4E8DB13FBFEE000F55853 /* CCSlider.m in Sources */,
@@ -4388,8 +4608,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCE4E8C413FBFEE000F55853 /* CCBigImage.m in Sources */,
-				DCE4E8CC13FBFEE000F55853 /* CCMenuAdvanced.m in Sources */,
-				DCE4E8D013FBFEE000F55853 /* CCMenuItemSpriteIndependent.m in Sources */,
 				DCE4E8D413FBFEE000F55853 /* CCScrollLayer.m in Sources */,
 				DCE4E8D813FBFEE000F55853 /* CCSendMessages.m in Sources */,
 				DCE4E8DC13FBFEE000F55853 /* CCSlider.m in Sources */,
@@ -4779,6 +4997,11 @@
 				DC073D721570F66C00711D72 /* CCActionCatmullRom.m in Sources */,
 				DCECE81D15921B07002A4C65 /* CCNode+Debug.m in Sources */,
 				DCECE82115921B29002A4C65 /* ccCArray.m in Sources */,
+				DC2BA119169DD055000A17A1 /* CCClippingNode.m in Sources */,
+				DC2BA11D169DD055000A17A1 /* CCDrawNode.m in Sources */,
+				DC2BA121169DD055000A17A1 /* ccFPSImages.m in Sources */,
+				DC2BA125169DD055000A17A1 /* CCPhysicsDebugNode.m in Sources */,
+				DC2BA129169DD055000A17A1 /* CCPhysicsSprite.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4882,6 +5105,11 @@
 				DC073D731570F66C00711D72 /* CCActionCatmullRom.m in Sources */,
 				DCECE81E15921B07002A4C65 /* CCNode+Debug.m in Sources */,
 				DCECE82215921B29002A4C65 /* ccCArray.m in Sources */,
+				DC2BA11A169DD055000A17A1 /* CCClippingNode.m in Sources */,
+				DC2BA11E169DD055000A17A1 /* CCDrawNode.m in Sources */,
+				DC2BA122169DD055000A17A1 /* ccFPSImages.m in Sources */,
+				DC2BA126169DD055000A17A1 /* CCPhysicsDebugNode.m in Sources */,
+				DC2BA12A169DD055000A17A1 /* CCPhysicsSprite.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

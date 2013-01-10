@@ -46,13 +46,17 @@
 	if (_implementsTouchesBegan)
 	{
 		[_delegate touchesBeganWithEvent:multiTouchEvent];
+		if (multiTouchEvent.swallowTouches)
+		{
+			return;
+		}
 	}
 	
 	if (_implementsTouchBegan)
 	{
 		for (KTTouchEvent* touchEvent in multiTouchEvent.touchEvents)
 		{
-			if ([touchEvent isValid] == NO)
+			if ([touchEvent isValid] == NO || touchEvent.swallowTouch)
 			{
 				break;
 			}
@@ -69,13 +73,17 @@
 		if (_implementsTouchesMoved)
 		{
 			[_delegate touchesMovedWithEvent:multiTouchEvent];
+			if (multiTouchEvent.swallowTouches)
+			{
+				return;
+			}
 		}
 		
 		if (_implementsTouchMoved)
 		{
 			for (KTTouchEvent* touchEvent in multiTouchEvent.touchEvents)
 			{
-				if ([touchEvent isValid] == NO)
+				if ([touchEvent isValid] == NO || touchEvent.swallowTouch)
 				{
 					break;
 				}
@@ -93,13 +101,17 @@
 		if (_implementsTouchesEnded)
 		{
 			[_delegate touchesEndedWithEvent:multiTouchEvent];
+			if (multiTouchEvent.swallowTouches)
+			{
+				return;
+			}
 		}
 		
 		if (_implementsTouchEnded)
 		{
 			for (KTTouchEvent* touchEvent in multiTouchEvent.touchEvents)
 			{
-				if ([touchEvent isValid] == NO)
+				if ([touchEvent isValid] == NO || touchEvent.swallowTouch)
 				{
 					break;
 				}
@@ -117,13 +129,17 @@
 		if (_implementsTouchesCancelled)
 		{
 			[_delegate touchesCancelledWithEvent:multiTouchEvent];
+			if (multiTouchEvent.swallowTouches)
+			{
+				return;
+			}
 		}
 		
 		if (_implementsTouchCancelled)
 		{
 			for (KTTouchEvent* touchEvent in multiTouchEvent.touchEvents)
 			{
-				if ([touchEvent isValid] == NO)
+				if ([touchEvent isValid] == NO || touchEvent.swallowTouch)
 				{
 					break;
 				}

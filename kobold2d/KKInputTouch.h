@@ -13,7 +13,7 @@
 
 @interface KKInputTouch : NSObject 
 #if KK_PLATFORM_IOS
-	<CCStandardTouchDelegate>
+	<CCTouchAllAtOnceDelegate>
 #elif KK_PLATFORM_MAC
 	<CCTouchEventDelegate>
 #endif

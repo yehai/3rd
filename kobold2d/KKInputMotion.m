@@ -44,7 +44,7 @@
 {
 	if (motionManager)
 	{
-		[[CCDirector sharedDirector].scheduler unscheduleAllSelectorsForTarget:self];
+		[[CCDirector sharedDirector].scheduler unscheduleAllForTarget:self];
 	}
 
 	[deviceMotion release];

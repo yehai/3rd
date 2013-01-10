@@ -40,7 +40,7 @@ const NSUInteger kTouchesPoolSize = 10;
 
 -(void) dealloc
 {
-	[[CCDirector sharedDirector].scheduler unscheduleAllSelectorsForTarget:self];
+	[[CCDirector sharedDirector].scheduler unscheduleAllForTarget:self];
 	
 	[touches release];
 	[touchesPool release];

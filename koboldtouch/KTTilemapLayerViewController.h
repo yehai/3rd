@@ -9,19 +9,20 @@
 #import "KTViewController.h"
 
 @class KTTilemapLayer;
+@class KTTilemapLayerModel;
+@class KTTilemapLayerView;
+@class KTTilemapModel;
 @class CCSpriteBatchNode;
 
 @interface KTTilemapLayerViewController : KTViewController
 {
 @protected
 @private
-	CCSpriteBatchNode* _batchNode;
-	CGPoint _rootNodePreviousPosition;
-	CGSize _visibleTilesOnScreen;
 }
 
-@property (nonatomic, weak) KTTilemapLayer* tileLayer;
+@property (nonatomic) KTTilemapLayerModel* tilemapLayerModel;
+@property (nonatomic) KTTilemapLayerView* tilemapLayerView;
 
--(id) initWithTileLayer:(KTTilemapLayer*)tileLayer;
+-(id) initWithTilemapModel:(KTTilemapModel*)tilemapModel tileLayer:(KTTilemapLayer*)tileLayer;
 
 @end

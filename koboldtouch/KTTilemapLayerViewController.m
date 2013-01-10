@@ -19,29 +19,44 @@
 #import "CCActionInterval.h"
 #import "CGPointExtension.h"
 #import "KTTilemapLayerView.h"
+#import "KTTilemapModel.h"
+#import "KTTilemapLayerModel.h"
 
 @interface KTTilemapLayerViewController ()
-// declare private methods here
 @end
 
 
 @implementation KTTilemapLayerViewController
 
--(id) initWithTileLayer:(KTTilemapLayer*)tileLayer
+-(id) initWithTilemapModel:(KTTilemapModel*)tilemapModel tileLayer:(KTTilemapLayer*)tileLayer
 {
 	self = [super init];
 	if (self)
 	{
-		self.tileLayer = tileLayer;
 		self.name = tileLayer.name;
+		
+		self.createModelBlock = ^()
+		{
+			self.tilemapLayerModel = [[KTTilemapLayerModel alloc] initWithTilemapModel:tilemapModel tileLayer:tileLayer];
+			self.tilemapLayerModel.scrollCenter = [CCDirector sharedDirector].windowCenter;
+			return self.tilemapLayerModel;
+		};
 	}
 	return self;
 }
 
-
 -(void) loadView
 {
-	self.rootNode = [[KTTilemapLayerView alloc] initWithTileLayer:_tileLayer];
+	KTTilemapLayer* tileLayer = self.tilemapLayerModel.tileLayer;
+	self.tilemapLayerView = [[KTTilemapLayerView alloc] initWithTileLayer:tileLayer];
+	self.tilemapLayerView.visible = tileLayer.visible;
+	self.rootNode = self.tilemapLayerView;
+}
+
+-(void) afterStep:(KTStepInfo *)stepInfo
+{
+	[_tilemapLayerView setScrollCenter:_tilemapLayerModel.scrollCenter];
+	[_tilemapLayerView drawTileLayer:_tilemapLayerModel.tileLayer];
 }
 
 @end
