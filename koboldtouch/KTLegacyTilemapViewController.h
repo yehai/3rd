@@ -10,7 +10,11 @@
 
 @class CCTMXTiledMap;
 
-/** Legacy tilemap view controller wrapping cocos2d's slow and minimalistic tilemap renderer CCTMXTiledMap. */
+/** Legacy tilemap view controller wrapping cocos2d's slow and minimalistic tilemap renderer CCTMXTiledMap.
+ You can only create 128x128 tilemaps (16,384 tiles) with this tilemap renderer, and this maximum size may
+ not even render at 60 fps on all devices. Use KTTilemapViewController instead to be able to display huge (millions of tiles)
+ tilemaps at 60 fps.
+ */
 @interface KTLegacyTilemapViewController : KTViewController
 {
 @protected

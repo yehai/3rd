@@ -228,6 +228,11 @@ __weak static KTGameController* _gameControllerInstance = nil;
 	{
 		[self internal_presentScene:sceneViewController.scene];
 	}
+	
+#if DEBUG
+	NSLog(@"----- Dumping Scene Object Graph -------");
+	NSLog(@"%@", [self.debugController objectGraph]);
+#endif
 }
 
 -(void) presentSceneViewController:(KTSceneViewController*)sceneViewController
@@ -455,6 +460,9 @@ __weak static KTGameController* _gameControllerInstance = nil;
 
 -(void) update:(float)deltaTime
 {
+	// can't add/remove subcontrollers during step methods
+	[self internal_beginDeferSubControllerAddAndRemove];
+	
 	// Trigger recursive updates of all controllers and their models.
 	// Note: by design the scene view controller receives each step message before the game controller's subcontrollers,
 	// because the scene view controller always is at index 0 of the subControllers list
@@ -470,6 +478,11 @@ __weak static KTGameController* _gameControllerInstance = nil;
 		[self performStepSelector:@selector(step:) onController:_previousSceneViewController];
 		[self performStepSelector:@selector(afterStep:) onController:_previousSceneViewController];
 	}
+
+	// can add/remove subcontrollers normally again
+	[self internal_endDeferSubControllerAddAndRemove];
+	// now add or remove any subcontroller being added or removed during any of the step methods
+	[self performAddAndRemoveDeferredSubControllersForController:self];
 
 	if (_presentNextScene != nil)
 	{

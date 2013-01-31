@@ -6,7 +6,8 @@
 //  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "KoboldTouch.h"
+#import "KTController.h"
+#import "kobold2d.h"
 
 /** Defines the properties that can be autoscaled. */
 typedef enum

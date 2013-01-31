@@ -11,7 +11,9 @@
 
 @class KTSceneViewController;
 
-// customized scene class for KoboldTouch, mainly communicating back and forth between KT and cocos2d
+/** Internal use only. Customized CCScene class for KoboldTouch. Mainly exchanging events between KT and cocos2d,
+ such as onEnter, onExit, cleanup, etc. */
 @interface KTCCScene : CCScene
+/** Reference to the scene view controller owning this KTCCScene object. */
 @property (nonatomic) KTSceneViewController* sceneViewController;
 @end

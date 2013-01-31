@@ -2,26 +2,30 @@
 //  KTTilemapLayerView.h
 //  KoboldTouch-Libraries
 //
-//  Created by Steffen Itterheim on 14.12.12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Created by Steffen Itterheim on 20.01.13.
+//  Copyright 2013 __MyCompanyName__. All rights reserved.
 //
 
-#import "kobold2d.h"
+#import "CCNode.h"
 
-#import "KTTilemap.h"
+@class KTTilemapLayer;
 
+/** Base view class for tilemap tile layer views. Prevents movement past map border. Ensures
+ position is cast to nearest integer (part of the "black line" artifacts fix). 
+ 
+ Caution: will need to be refactored to support isometric & hex views.
+ */
 @interface KTTilemapLayerView : CCNode
 {
 @protected
-@private
-	CCSpriteBatchNode* _batchNode;
-	CGPoint _previousPosition;
 	CGSize _visibleTilesOnScreen;
+	CGSize _viewBoundary;
+	__weak KTTilemapLayer* _tileLayer;
+	BOOL _endlessScrolling;
+@private
 }
 
--(id) initWithTileLayer:(KTTilemapLayer*)tileLayer;
-
--(void) setScrollCenter:(CGPoint)scrollCenter;
--(void) drawTileLayer:(KTTilemapLayer*)tileLayer;
+/** Creates a KTTilemapLayerView with a KTTilemapLayer. */
+-(id) initWithTilemapLayer:(KTTilemapLayer*)tileLayer;
 
 @end

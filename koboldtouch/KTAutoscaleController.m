@@ -82,7 +82,6 @@ static CGSize _scaleFactor = {1.0f, 1.0f};
 -(void) orientationChanged:(NSNotification*)notification
 {
 	[self updateCurrentResolutionAndScaleFactor];
-	LOG_EXPR(_currentResolution);
 }
 
 // At this point the model is already initialized. Update the controller based on model.

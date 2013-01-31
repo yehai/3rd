@@ -11,7 +11,8 @@
 #import "KTViewController.h"
 #import "KTModel.h"
 
-static Class kKTViewControllerClass;
+static Class kKTViewControllerClass = nil;
+static BOOL _deferSubControllerAddAndRemove = NO;
 
 @implementation KTController
 
@@ -101,17 +102,25 @@ static Class kKTViewControllerClass;
 		NSAssert(controller, @"can't add subController - the controller you tried to add is nil");
 		NSAssert1([_subControllers containsObject:controller] == NO, @"can't add subController %@ - controller already added", controller);
 		
-		if (insertAsFirstController)
+		if (_deferSubControllerAddAndRemove)
 		{
-			[_subControllers insertObject:controller atIndex:0];
+			NSAssert(insertAsFirstController == NO, @"Can't 'insert as first controller' during a step method! Controller to be inserted is: %@", controller);
+			[self deferAddOfController:controller];
 		}
 		else
 		{
-			[_subControllers addObject:controller];
+			if (insertAsFirstController)
+			{
+				[_subControllers insertObject:controller atIndex:0];
+			}
+			else
+			{
+				[_subControllers addObject:controller];
+			}
 		}
 
 		// for view controllers added after the scene was presented, call loadView manually here
-		BOOL sendLoadView = ((KTController*)self.sceneViewController != controller && [controller isKindOfClass:kKTViewControllerClass]);
+		BOOL sendLoadView = [controller isKindOfClass:kKTViewControllerClass];
 		
 		[self internal_setControllerReferencesOnController:controller
 										  parentController:self
@@ -202,7 +211,15 @@ static Class kKTViewControllerClass;
 										  parentController:nil
 									   sceneViewController:nil
 											gameController:self.gameController];
-		[_subControllers removeObject:controller];
+		
+		if (_deferSubControllerAddAndRemove)
+		{
+			[self deferRemoveOfController:controller];
+		}
+		else
+		{
+			[_subControllers removeObject:controller];
+		}
 	}
 }
 
@@ -258,6 +275,63 @@ static Class kKTViewControllerClass;
 {
 	[self.parentController removeSubController:self];
 }
+
+#pragma mark Adding/Removing Scheduled SubControllers
+
+-(void) deferRemoveOfController:(KTController*)controller
+{
+	if (_toBeRemovedSubControllers == nil)
+	{
+		_toBeRemovedSubControllers = [NSMutableArray arrayWithCapacity:1];
+	}
+	
+	[_toBeRemovedSubControllers addObject:controller];
+}
+
+-(void) deferAddOfController:(KTController*)controller
+{
+	if (_toBeAddedSubControllers == nil)
+	{
+		_toBeAddedSubControllers = [NSMutableArray arrayWithObject:controller];
+	}
+	
+	[_toBeAddedSubControllers addObject:controller];
+}
+
+-(void) performAddAndRemoveDeferredSubControllersForController:(KTController*)controller
+{
+	NSMutableArray* subControllers = controller.subControllers;
+	NSMutableArray* toBeAddedSubControllers = controller.toBeAddedSubControllers;
+	NSMutableArray* toBeRemovedSubControllers = controller.toBeRemovedSubControllers;
+
+	if (toBeAddedSubControllers.count > 0)
+	{
+		[subControllers addObjectsFromArray:toBeAddedSubControllers];
+		[toBeAddedSubControllers removeAllObjects];
+	}
+
+	if (toBeRemovedSubControllers.count > 0)
+	{
+		[subControllers removeObjectsInArray:toBeRemovedSubControllers];
+		[toBeRemovedSubControllers removeAllObjects];
+	}
+
+	for (KTController* subController in subControllers)
+	{
+		[self performAddAndRemoveDeferredSubControllersForController:subController];
+	}
+}
+
+-(void) internal_beginDeferSubControllerAddAndRemove
+{
+	_deferSubControllerAddAndRemove = YES;
+}
+
+-(void) internal_endDeferSubControllerAddAndRemove
+{
+	_deferSubControllerAddAndRemove = NO;
+}
+
 
 #pragma mark Internal
 

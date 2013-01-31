@@ -9,8 +9,6 @@
 #import "ccMoreMacros.h"
 #import "KKInput.h"
 
-#import "FixCategoryBug.h"
-FIX_CATEGORY_BUG(CCDirector)
 
 static NSUInteger CCDirectorExtensionFrameCounter = 0;
 

@@ -321,7 +321,7 @@
 
 	[glView setUserInteractionEnabled:config.enableUserInteraction];
 	[glView setMultipleTouchEnabled:config.enableMultiTouch];
-
+	
 	CCLOG(@"%@", koboldTouchVersion());
 
 	// Setup director

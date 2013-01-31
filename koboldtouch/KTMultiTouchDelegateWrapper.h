@@ -11,7 +11,9 @@
 @class KTMultiTouchController;
 @class KTMultiTouchEvent;
 
-// internal use only
+/** Internal use only. This wrapper class merely forwards touch event messages to controllers. It keeps track of the selectors
+ the controller actually implemented to avoid calling respondsToSelector for every event. It also splits touch events into
+ a multi-touch events as well as sending a message for each individual touch. And it handles swallowing touch events. */
 @interface KTMultiTouchDelegateWrapper : NSObject
 {
 @private

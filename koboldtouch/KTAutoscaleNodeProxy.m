@@ -16,8 +16,8 @@
 	self = [super init];
 	if (self)
 	{
-		node.userObject = self;
-		self.node = node;
+		_node = node;
+		_node.userObject = self;
 		self.autoscaleController = autoscaleController;
 	}
 	return self;
@@ -26,27 +26,13 @@
 -(void) cleanup
 {
 	_node.userObject = nil;
-	self.node = nil;
+	_node = nil;
 	self.autoscaleController = nil;
-}
-
-@dynamic scaledProperties;
--(void) setScaledProperties:(KTAutoscaleProperty)propertyFlags
-{
-	_autoscalePosition = (propertyFlags & KTAutoscalePropertyPosition);
-	//_autoscaleScaleX = (propertyFlags & KTAutoscalePropertyScaleX);
-	//_autoscaleScaleY = (propertyFlags & KTAutoscalePropertyScaleY);
-}
--(KTAutoscaleProperty) scaledProperties
-{
-	return (KTAutoscaleProperty)((_autoscalePosition ? KTAutoscalePropertyPosition : 0) /*|
-								 (_autoscaleScaleX ? KTAutoscalePropertyScaleX : 0) |
-								 (_autoscaleScaleY ? KTAutoscalePropertyScaleY : 0)*/);
 }
 
 -(CGPoint) scaledPosition:(CGPoint)position
 {
-	if (_autoscalePosition)
+	if (_scaledProperties & KTAutoscalePropertyPosition)
 	{
 		position.x *= _autoscaleController.scaleFactor.width;
 		position.y *= _autoscaleController.scaleFactor.height;

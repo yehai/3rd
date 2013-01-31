@@ -6,8 +6,7 @@
 //  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "KoboldTouch.h"
-
+#import "KTViewController.h"
 #import "ccTypes.h"
 
 typedef enum

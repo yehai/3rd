@@ -35,6 +35,8 @@
  */
 
 #import "KTTilemap.h"
+#import "KTTilemapTileset.h"
+#import "KTTilemapProperties.h"
 #import "KTTMXParser.h"
 #import "KTMacros.h"
 
@@ -48,9 +50,52 @@
 
 #pragma mark Init
 
--(id) initWithCoder:(NSCoder *)aDecoder
+-(id) init
 {
 	self = [super init];
+	if (self)
+	{
+		_tilesets = [NSMutableArray array];
+		_layers = [NSMutableArray array];
+	}
+	return self;
+}
+
++(id) tilemapWithTMXFile:(NSString *)tmxFile
+{
+	return [[self alloc] initWithTMXFile:tmxFile];
+}
+
+-(id) initWithTMXFile:(NSString*)tmxFile
+{
+	self = [self init];
+	if (self)
+	{
+		[self parseTMXFile:tmxFile];
+	}
+	return self;
+}
+
++(id) tilemapWithOrientation:(KTTilemapOrientation)orientation mapSize:(CGSize)mapSize gridSize:(CGSize)gridSize
+{
+	return [[self alloc] initWithOrientation:orientation mapSize:mapSize gridSize:gridSize];
+}
+
+-(id) initWithOrientation:(KTTilemapOrientation)orientation mapSize:(CGSize)mapSize gridSize:(CGSize)gridSize
+{
+	self = [self init];
+	if (self)
+	{
+		_orientation = orientation;
+		_mapSize = mapSize;
+		_gridSize = gridSize;
+	}
+	return self;
+}
+
+-(id) initWithCoder:(NSCoder *)aDecoder
+{
+	self = [self init];
 	if (self)
 	{
 	}
@@ -63,9 +108,9 @@
 
 -(NSString*) description
 {
-	return [NSString stringWithFormat:@"%@ (orientation: %i, mapSize: %.0f,%.0f, gridSize: %.0f,%.0f, properties: %u, tileSets: %u, tileProperties: %u, layers: %u)",
+	return [NSString stringWithFormat:@"%@ (orientation: %i, mapSize: %.0f,%.0f, gridSize: %.0f,%.0f, properties: %u, tileSets: %u, layers: %u)",
 			[super description], _orientation, _mapSize.width, _mapSize.height, _gridSize.width, _gridSize.height,
-			(unsigned int)_properties.count, (unsigned int)_tilesets.count,	(unsigned int)_tileProperties.count, (unsigned int)_layers.count];
+			(unsigned int)_properties.count, (unsigned int)_tilesets.count,	(unsigned int)_layers.count];
 }
 
 -(NSString*) debugDescription
@@ -77,7 +122,6 @@
 	{
 		[str appendFormat:@"\n%@", [tileset description]];
 	}
-	[str appendFormat:@"\ntile properties: %@", _tileProperties];
 	
 	for (KTTilemapLayer* layer in _layers)
 	{
@@ -104,17 +148,63 @@
 {
 	KTASSERT_FILEEXISTS(tmxFile);
 
-	_tilesets = [NSMutableArray array];
-	_layers = [NSMutableArray array];
-
 	@autoreleasepool
 	{
 		KTTMXParser* parser = [[KTTMXParser alloc] init];
 		[parser parseTMXFile:tmxFile tilemap:self];
 		parser = nil;
 	}
+}
 
-	LOG_EXPR([self debugDescription]);
+-(KTTilemapTileset*) tilesetForGid:(gid_t)gid
+{
+	KTTilemapTileset* foundTileset = nil;
+
+	gid = (gid & KTTilemapTileFlipMask);
+	if (gid > 0)
+	{
+		for (KTTilemapTileset* tileset in _tilesets)
+		{
+			if (tileset.firstGid > gid)
+			{
+				break;
+			}
+			foundTileset = tileset;
+		}
+	}
+	
+	return foundTileset;
+}
+
+-(void) addTileset:(KTTilemapTileset*)tileset
+{
+	[_tilesets addObject:tileset];
+}
+
+-(void) addLayer:(KTTilemapLayer*)layer
+{
+	[_layers addObject:layer];
+}
+
+-(KTTilemapLayer*) layerByName:(NSString*)name
+{
+	for (KTTilemapLayer* layer in _layers)
+	{
+		if ([layer.name isEqualToString:name])
+		{
+			return layer;
+		}
+	}
+	return nil;
+}
+
+-(KTTilemapProperties*) properties
+{
+	if (_properties == nil)
+	{
+		_properties = [[KTTilemapProperties alloc] init];
+	}
+	return _properties;
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import "KTMultiTouchDelegateWrapper.h"
 #import "KTMultiTouchController.h"
+#import "KTMultiTouchEvent.h"
+#import "KTTouchEvent.h"
 
 @implementation KTMultiTouchDelegateWrapper
 

@@ -204,8 +204,8 @@
 		_world->Step(self.timeStep, _velocityIterations, _positionIterations);
 	}
 	
-	[self removeScheduledToBeRemovedBodies];
 	[self addScheduledToBeAddedBodies];
+	[self removeScheduledToBeRemovedBodies];
 }
 
 -(b2World*) internal_getWorld

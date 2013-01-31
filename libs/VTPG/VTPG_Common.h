@@ -92,6 +92,8 @@ return [NSString stringWithFormat:(formatString), (*(typeToMatch*)value)]
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(__unsafe_unretained id,@"%@");
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(short,@"%hi");
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(unsigned short,@"%hu");
+	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(char,@"%i");
+	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(unsigned char,@"%u");
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(int,@"%i");
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(unsigned, @"%u");
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(long,@"%li");

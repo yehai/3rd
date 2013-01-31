@@ -69,7 +69,7 @@
  @since v2.0.0
  */
 #ifndef CC_ENABLE_GL_STATE_CACHE
-#define CC_ENABLE_GL_STATE_CACHE 0
+#define CC_ENABLE_GL_STATE_CACHE 1
 #endif
 
 /** @def CC_ENABLE_DEPRECATED
@@ -126,7 +126,7 @@
  Default: 0,0 (bottom-left corner)
  */
 #ifndef CC_DIRECTOR_STATS_POSITION
-#define CC_DIRECTOR_STATS_POSITION ccp(0,0)
+#define CC_DIRECTOR_STATS_POSITION ccp(2,2)
 #endif
 
 /** @def CC_DIRECTOR_IOS_USE_BACKGROUND_THREAD

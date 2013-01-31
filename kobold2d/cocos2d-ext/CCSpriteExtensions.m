@@ -9,9 +9,6 @@
 #import "CCAnimationExtensions.h"
 #import "CCRemoveFromParentAction.h"
 
-#import "FixCategoryBug.h"
-FIX_CATEGORY_BUG(CCSprite)
-
 @implementation CCSprite (KoboldExtensions)
 
 -(void) privatePlayAnimWithFormat:(NSString*)format numFrames:(int)numFrames firstIndex:(int)firstIndex delay:(float)delay animateTag:(int)animateTag looped:(BOOL)looped remove:(BOOL)remove restoreOriginalFrame:(BOOL)restoreOriginalFrame

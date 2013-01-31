@@ -8,98 +8,14 @@
 
 #import "KTMultiTouchController.h"
 #import "KTMultiTouchDelegateWrapper.h"
+#import "KTMultiTouchEvent.h"
+#import "KTTouchEvent.h"
 
 #import "CCDirector.h"
 #import "CCDirectorIOS.h"
 #import "CCDirectorMac.h"
 #import "CCGLView.h"
 #import "CCTouchDispatcher.h"
-
-
-const int kMaxMultiTouchCount = 5;
-static CGPoint kInvalidTouchLocation;
-
-@implementation KTTouchEvent
--(void) reset
-{
-	_event = nil;
-	_touch = nil;
-	_locationInGLView = kInvalidTouchLocation;
-	_previousLocationInGLView = kInvalidTouchLocation;
-	_swallowTouch = NO;
-}
--(BOOL) isValid
-{
-	return (_event != nil);
-}
-
--(void) updateWithEvent:(KTEvent*)event touch:(KTTouch*)touch
-{
-	_event = event;
-	_touch = touch;
-#if KK_PLATFORM_IOS
-	CCDirector* director = [CCDirector sharedDirector];
-	CCGLView* glView = (CCGLView*)director.view;
-	_locationInGLView = [director convertToGL:[touch locationInView:glView]];
-	_previousLocationInGLView = [director convertToGL:[touch previousLocationInView:glView]];
-#elif KK_PLATFORM_MAC
-	// TODO...
-#endif
-}
--(NSString*) description
-{
-	return [NSString stringWithFormat:@"%@ locationInGLView: %.1f,%.1f, previousLocationInGLView: %.1f,%.1f, swallowTouch: %u - event: %p - touch: %@",
-			[super description], _locationInGLView.x, _locationInGLView.y, _previousLocationInGLView.x, _previousLocationInGLView.y, _swallowTouch, _event, _touch];
-}
-@end
-
-@implementation KTMultiTouchEvent
--(id) init
-{
-	self = [super init];
-	if (self)
-	{
-		kInvalidTouchLocation = CGPointMake(-1, -1);
-		_touchEvents = [NSMutableArray arrayWithCapacity:kMaxMultiTouchCount];
-		
-		for (int i = 0; i < kMaxMultiTouchCount; i++)
-		{
-			KTTouchEvent* touchEvent = [[KTTouchEvent alloc] init];
-			[_touchEvents addObject:touchEvent];
-		}
-	}
-	return self;
-}
--(void) reset
-{
-	_swallowTouches = NO;
-	
-	for (KTTouchEvent* touchEvent in _touchEvents)
-	{
-		[touchEvent reset];
-	}
-}
-
--(void) updateWithTouches:(NSSet*)touches event:(KTEvent*)event
-{
-	[self reset];
-	
-#if KK_PLATFORM_IOS
-	NSUInteger i = 0;
-	for (KTTouch* touch in touches)
-	{
-		KTTouchEvent* touchEvent = [_touchEvents objectAtIndex:i++];
-		[touchEvent updateWithEvent:event touch:touch];
-	}
-#elif KK_PLATFORM_MAC
-	// TODO ...
-#endif
-}
--(NSString*) description
-{
-	return [NSString stringWithFormat:@"%@ swallowTouches: %u", [super description], _swallowTouches];
-}
-@end
 
 
 @implementation KTMultiTouchController
@@ -165,7 +81,30 @@ static CGPoint kInvalidTouchLocation;
 		{
 			_glView.touchDelegate = nil;
 		}
+#elif KK_PLATFORM_MAC
+		if (_emulateTouchesWithMouse)
+		{
+			if (_enabled)
+			{
+				[[CCDirector sharedDirector].eventDispatcher addMouseDelegate:self priority:INT_MIN];
+			}
+			else
+			{
+				[[CCDirector sharedDirector].eventDispatcher removeMouseDelegate:self];
+			}
+		}
 #endif
+	}
+}
+
+-(void) setEmulateTouchesWithMouse:(BOOL)emulateTouchesWithMouse
+{
+	if (_emulateTouchesWithMouse != emulateTouchesWithMouse)
+	{
+		_emulateTouchesWithMouse = emulateTouchesWithMouse;
+		// turn yourself off and on again (or vice versa)
+		self.enabled = !self.enabled;
+		self.enabled = !self.enabled;
 	}
 }
 
@@ -207,8 +146,7 @@ static CGPoint kInvalidTouchLocation;
 
 #pragma mark touch events
 
-#if KK_PLATFORM_IOS
--(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+-(void) touchesBegan:(NSSet *)touches withEvent:(KTEvent *)event
 {
 	if (_delegateWrappers.count > 0)
 	{
@@ -227,7 +165,7 @@ static CGPoint kInvalidTouchLocation;
 	[((CCDirectorIOS*)_director).touchDispatcher touchesBegan:touches withEvent:event];
 #endif
 }
--(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+-(void) touchesMoved:(NSSet *)touches withEvent:(KTEvent *)event
 {
 	if (_delegateWrappers.count > 0)
 	{
@@ -246,7 +184,7 @@ static CGPoint kInvalidTouchLocation;
 	[((CCDirectorIOS*)_director).touchDispatcher touchesMoved:touches withEvent:event];
 #endif
 }
--(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+-(void) touchesEnded:(NSSet *)touches withEvent:(KTEvent *)event
 {
 	if (_delegateWrappers.count > 0)
 	{
@@ -265,7 +203,7 @@ static CGPoint kInvalidTouchLocation;
 	[((CCDirectorIOS*)_director).touchDispatcher touchesEnded:touches withEvent:event];
 #endif
 }
--(void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+-(void) touchesCancelled:(NSSet *)touches withEvent:(KTEvent *)event
 {
 	if (_delegateWrappers.count > 0)
 	{
@@ -285,9 +223,58 @@ static CGPoint kInvalidTouchLocation;
 #endif
 }
 
-#elif KK_PLATFORM_MAC
+#if KK_PLATFORM_MAC
 
-// TODO...
+-(BOOL) ccMouseDown:(NSEvent*)event
+{
+	if (_emulateTouchesWithMouse)
+	{
+		[self touchesBegan:nil withEvent:event];
+	}
+	return NO;
+}
+-(BOOL) ccRightMouseDown:(NSEvent*)event
+{
+	return [self ccMouseDown:event];
+}
+-(BOOL) ccOtherMouseDown:(NSEvent*)event
+{
+	return [self ccMouseDown:event];
+}
+
+-(BOOL) ccMouseDragged:(NSEvent*)event
+{
+	if (_emulateTouchesWithMouse)
+	{
+		[self touchesMoved:nil withEvent:event];
+	}
+	return NO;
+}
+-(BOOL) ccRightMouseDragged:(NSEvent*)event
+{
+	return [self ccMouseDragged:event];
+}
+-(BOOL) ccOtherMouseDragged:(NSEvent*)event
+{
+	return [self ccMouseDragged:event];
+}
+
+-(BOOL) ccMouseUp:(NSEvent*)event
+{
+	if (_emulateTouchesWithMouse)
+	{
+		[self touchesEnded:nil withEvent:event];
+	}
+	return NO;
+}
+-(BOOL) ccRightMouseUp:(NSEvent*)event
+{
+	return [self ccMouseUp:event];
+}
+-(BOOL) ccOtherMouseUp:(NSEvent*)event
+{
+	return [self ccMouseUp:event];
+}
 
 #endif
 

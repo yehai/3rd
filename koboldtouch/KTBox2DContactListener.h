@@ -12,7 +12,11 @@
 #include "Box2D.h"
 #import "KTPhysicsBodyCollisionProtocol.h"
 
-// internal use only
+/** Internal use only. C++ class that subclasses Box2D's b2ContactListener in order to receive collision (contact) events.
+ The contact events are then forwarded to each colliding body's collisionDelegate (an object implementing the KTPhysicsBodyCollisionProtocol).
+ 
+ Note: does not send PreSolve & PostSolve messages yet.
+ */
 class KTBox2DContactListener : public b2ContactListener
 {
 private:

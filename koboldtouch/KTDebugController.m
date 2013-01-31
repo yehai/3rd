@@ -11,6 +11,8 @@
 #import "KTViewController.h"
 #import "CCNode.h"
 
+#import <objc/runtime.h>
+
 @implementation KTDebugController
 
 -(NSString*) stringWithNumberOfTabs:(int)tabs
@@ -56,6 +58,16 @@
 -(NSString*) objectGraph
 {
 	return [self objectGraphWithRootController:(KTController*)self.gameController];
+}
+
+-(size_t) sizeOfClassInstance:(Class)class
+{
+	return class_getInstanceSize(class);
+}
+
+-(void) logSizeOfClassInstance:(Class)class
+{
+	NSLog(@"Class %@ instance size is %lu bytes.", NSStringFromClass(class), class_getInstanceSize(class));
 }
 
 @end

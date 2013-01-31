@@ -11,15 +11,18 @@
 
 /** @file KTTypes.h */
 
-static NSString* KTDirectorDidReshapeProjectionNotification = @"KTDirectorDidReshapeProjectionNotification";
+static NSString* const KTDirectorDidReshapeProjectionNotification = @"KTDirectorDidReshapeProjectionNotification";
+
+/** gid (globally unique tile index) is an unsigned int (32 bit) value */
+typedef uint32_t gid_t;
 
 #if KK_PLATFORM_IOS
-
-//
+typedef UIEvent KTEvent;
+typedef UITouch KTTouch;
 
 #elif KK_PLATFORM_MAC
-
-//
+typedef NSEvent KTEvent;
+typedef NSTouch KTTouch;
 
 #endif // KK_PLATFORM_MAC
 

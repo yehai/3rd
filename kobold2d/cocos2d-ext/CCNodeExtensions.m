@@ -8,9 +8,6 @@
 #import "CCNodeExtensions.h"
 #import "ccMoreTypes.h"
 
-#import "FixCategoryBug.h"
-FIX_CATEGORY_BUG(CCNode)
-
 
 @implementation CCNode (KoboldExtensions)
 

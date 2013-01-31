@@ -10,6 +10,8 @@
 #import "KTTilemapViewController.h"
 #import "KTMacros.h"
 
+#import "KTMoveAction.h"
+
 @interface KTTilemapModel ()
 // declare private methods here
 @end
@@ -22,14 +24,13 @@
 	if (_tilemap == nil)
 	{
 		NSString* tmxFile = ((KTTilemapViewController*)self.controller).tmxFile;
-		KTASSERT_FILEEXISTS(tmxFile);
-		_tilemap = [[KTTilemap alloc] init];
-		[_tilemap parseTMXFile:tmxFile];
+		_tilemap = [KTTilemap tilemapWithTMXFile:tmxFile];
 	}
 }
 
 -(void) unload
 {
+	_tilemap = nil;
 }
 
 @end

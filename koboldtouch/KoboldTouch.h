@@ -15,6 +15,11 @@
 #import "KTTextMenu.h"
 #import "KTMutableNumber.h"
 #import "KTMultiTouchProtocol.h"
+#import "KTMultiTouchEvent.h"
+#import "KTTouchEvent.h"
+#import "KTTypes.h"
+#import "KTMacros.h"
+#import "KTDrawingPrimitives.h"
 
 // Categories
 #import "NSCoder+KTCoderCategory.h"
@@ -61,10 +66,26 @@
 #import "KTParticleBatchViewController.h"
 #import "KTLegacyTilemapViewController.h"
 #import "KTColorGradientViewController.h"
+#import "KTDrawingPrimitivesViewController.h"
+#import "KTDrawingPrimitivesModel.h"
 
 // Tilemap
 #import "KTTilemapViewController.h"
-#import "KTTilemapLayerViewController.h"
+#import "KTTileLayerViewController.h"
 #import "KTTilemapModel.h"
+#import "KTTilemap.h"
+#import "KTTilemapProperties.h"
+#import "KTTilemapTileProperties.h"
+#import "KTTilemapTileset.h"
+#import "KTTilemapLayer.h"
+#import "KTTilemapLayerTiles.h"
+#import "KTTilemapObject.h"
+
+// Actions
+#import "KTAction.h"
+#import "KTMoveAction.h"
+
+// Abilities
+
 
 #endif

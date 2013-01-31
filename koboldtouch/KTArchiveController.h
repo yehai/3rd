@@ -18,7 +18,8 @@ const static int KTArchiveNotDecoding = -3;
 
 @class KTSceneViewController;
 
-/** Creates model archives and restores model objects from an archive. */
+/** Creates model archives and restores model objects from an archive. Proof of concept, not supported
+ by most KT classes yet. Needs refactoring. */
 @interface KTArchiveController : KTController
 {
 	@private

@@ -6,6 +6,7 @@
 //
 //
 
+#import <Foundation/Foundation.h>
 #import "KTController.h"
 
 /** Controller that helps with debugging. For example allows you to dump the controller/model/view hierarchy as a string.
@@ -17,5 +18,11 @@
 
 /** Returns the MVC object graph as formatted string starting with the given controller object. */
 -(NSString*) objectGraphWithRootController:(KTController*)controller;
+
+/** Returns the size (in bytes) of instances of the class. Useful for estimating memory usage. */
+-(size_t) sizeOfClassInstance:(Class)class;
+
+/** Prints the size (in bytes) of instances of the class to the Debug Console. */
+-(void) logSizeOfClassInstance:(Class)class;
 
 @end

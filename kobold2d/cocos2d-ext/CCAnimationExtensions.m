@@ -7,8 +7,6 @@
 
 #import "CCAnimationExtensions.h"
 
-#import "FixCategoryBug.h"
-FIX_CATEGORY_BUG(CCAnimation)
 
 @implementation CCAnimation (KoboldExtensions)
 

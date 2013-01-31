@@ -8,7 +8,7 @@
 
 #import "KTMotionController.h"
 
-// internal use only
+/** Internal use only. This wrapper handles sending the motion events to controllers. Keeps track of which selectors the controller implements. */
 @interface KTMotionDelegateWrapper : NSObject
 {
 	@private

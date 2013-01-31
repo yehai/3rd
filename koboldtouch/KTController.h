@@ -27,12 +27,14 @@ static const NSInteger kInvalidControllerTag = -1;
 
 	@private
 	NSMutableArray* _subControllers;
+	NSMutableArray* _toBeRemovedSubControllers;
+	NSMutableArray* _toBeAddedSubControllers;
 }
 
 /** The model associated with this controller. Each controller has exactly one model. The model can be nil. */
-@property (nonatomic, readonly) KTModel* model;
+@property (nonatomic, strong) KTModel* model;
 /** The sub controllers, if any. */
-@property (nonatomic, readonly) NSArray* subControllers;
+@property (nonatomic, readonly) NSMutableArray* subControllers;
 /** Returns the controller's parent controller. The game controller's parentController is always nil. */
 @property (nonatomic, readonly, weak) KTController* parentController;
 /** Returns the currently presented scene view controller instance. */
@@ -91,4 +93,10 @@ static const NSInteger kInvalidControllerTag = -1;
 									parentController:(KTController*)parentController
 								 sceneViewController:(KTSceneViewController*)sceneViewController
 									  gameController:(KTGameController*)gameController;
+
+@property (nonatomic, readonly) NSMutableArray* toBeRemovedSubControllers;
+@property (nonatomic, readonly) NSMutableArray* toBeAddedSubControllers;
+-(void) performAddAndRemoveDeferredSubControllersForController:(KTController*)controller;
+-(void) internal_beginDeferSubControllerAddAndRemove;
+-(void) internal_endDeferSubControllerAddAndRemove;
 @end

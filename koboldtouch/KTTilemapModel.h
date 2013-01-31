@@ -6,10 +6,10 @@
 //  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "KTModel.h"
+#import "KTEntityModel.h"
 #import "KTTilemap.h"
 
-/** Model for a TMX tilemap. */
+/** Model for a TMX tilemap. Currently only holds a reference to the KTTilemap object which is in in-memory representation of the TMX file. */
 @interface KTTilemapModel : KTModel
 {
 @protected

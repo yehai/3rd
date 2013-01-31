@@ -195,6 +195,34 @@
 		DC22A1C4150FC10400B58197 /* CCParticleBatchNode.h in Headers */ = {isa = PBXBuildFile; fileRef = DC22A1C1150FC10400B58197 /* CCParticleBatchNode.h */; };
 		DC22A1C5150FC10400B58197 /* CCParticleBatchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22A1C2150FC10400B58197 /* CCParticleBatchNode.m */; };
 		DC22A1C6150FC10400B58197 /* CCParticleBatchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22A1C2150FC10400B58197 /* CCParticleBatchNode.m */; };
+		DC22D4C916A8906400D453E4 /* KTMultiTouchEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = DC22D4C716A8906400D453E4 /* KTMultiTouchEvent.h */; };
+		DC22D4CA16A8906400D453E4 /* KTMultiTouchEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = DC22D4C716A8906400D453E4 /* KTMultiTouchEvent.h */; };
+		DC22D4CB16A8906400D453E4 /* KTMultiTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D4C816A8906400D453E4 /* KTMultiTouchEvent.m */; };
+		DC22D4CC16A8906400D453E4 /* KTMultiTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D4C816A8906400D453E4 /* KTMultiTouchEvent.m */; };
+		DC22D4D016A8907500D453E4 /* KTTouchEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = DC22D4CE16A8907500D453E4 /* KTTouchEvent.h */; };
+		DC22D4D116A8907500D453E4 /* KTTouchEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = DC22D4CE16A8907500D453E4 /* KTTouchEvent.h */; };
+		DC22D4D216A8907500D453E4 /* KTTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D4CF16A8907500D453E4 /* KTTouchEvent.m */; };
+		DC22D4D316A8907500D453E4 /* KTTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D4CF16A8907500D453E4 /* KTTouchEvent.m */; };
+		DC22D50916A97B7300D453E4 /* KTDrawingPrimitivesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC22D50716A97B7300D453E4 /* KTDrawingPrimitivesViewController.h */; };
+		DC22D50A16A97B7300D453E4 /* KTDrawingPrimitivesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC22D50716A97B7300D453E4 /* KTDrawingPrimitivesViewController.h */; };
+		DC22D50B16A97B7300D453E4 /* KTDrawingPrimitivesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D50816A97B7300D453E4 /* KTDrawingPrimitivesViewController.m */; };
+		DC22D50C16A97B7300D453E4 /* KTDrawingPrimitivesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D50816A97B7300D453E4 /* KTDrawingPrimitivesViewController.m */; };
+		DC22D51316A97DE100D453E4 /* KTDrawingPrimitives.h in Headers */ = {isa = PBXBuildFile; fileRef = DC22D51116A97DE100D453E4 /* KTDrawingPrimitives.h */; };
+		DC22D51416A97DE100D453E4 /* KTDrawingPrimitives.h in Headers */ = {isa = PBXBuildFile; fileRef = DC22D51116A97DE100D453E4 /* KTDrawingPrimitives.h */; };
+		DC22D51516A97DE100D453E4 /* KTDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D51216A97DE100D453E4 /* KTDrawingPrimitives.m */; };
+		DC22D51616A97DE100D453E4 /* KTDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D51216A97DE100D453E4 /* KTDrawingPrimitives.m */; };
+		DC22D51916A9890C00D453E4 /* KTDrawingPrimitivesModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DC22D51716A9890C00D453E4 /* KTDrawingPrimitivesModel.h */; };
+		DC22D51A16A9890C00D453E4 /* KTDrawingPrimitivesModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DC22D51716A9890C00D453E4 /* KTDrawingPrimitivesModel.h */; };
+		DC22D51B16A9890C00D453E4 /* KTDrawingPrimitivesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D51816A9890C00D453E4 /* KTDrawingPrimitivesModel.m */; };
+		DC22D51C16A9890C00D453E4 /* KTDrawingPrimitivesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D51816A9890C00D453E4 /* KTDrawingPrimitivesModel.m */; };
+		DC24BF2F16A6F50000A8A8A5 /* KTAction.h in Headers */ = {isa = PBXBuildFile; fileRef = DC24BF2D16A6F50000A8A8A5 /* KTAction.h */; };
+		DC24BF3016A6F50000A8A8A5 /* KTAction.h in Headers */ = {isa = PBXBuildFile; fileRef = DC24BF2D16A6F50000A8A8A5 /* KTAction.h */; };
+		DC24BF3116A6F50000A8A8A5 /* KTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DC24BF2E16A6F50000A8A8A5 /* KTAction.m */; };
+		DC24BF3216A6F50000A8A8A5 /* KTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DC24BF2E16A6F50000A8A8A5 /* KTAction.m */; };
+		DC24BF3516A6FE2F00A8A8A5 /* KTMoveAction.h in Headers */ = {isa = PBXBuildFile; fileRef = DC24BF3316A6FE2F00A8A8A5 /* KTMoveAction.h */; };
+		DC24BF3616A6FE2F00A8A8A5 /* KTMoveAction.h in Headers */ = {isa = PBXBuildFile; fileRef = DC24BF3316A6FE2F00A8A8A5 /* KTMoveAction.h */; };
+		DC24BF3716A6FE2F00A8A8A5 /* KTMoveAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DC24BF3416A6FE2F00A8A8A5 /* KTMoveAction.m */; };
+		DC24BF3816A6FE2F00A8A8A5 /* KTMoveAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DC24BF3416A6FE2F00A8A8A5 /* KTMoveAction.m */; };
 		DC272470160E477300D88944 /* KTGameController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC27246E160E477300D88944 /* KTGameController.h */; };
 		DC272471160E477300D88944 /* KTGameController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC27246E160E477300D88944 /* KTGameController.h */; };
 		DC272472160E477300D88944 /* KTGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27246F160E477300D88944 /* KTGameController.m */; };
@@ -427,6 +455,10 @@
 		DC4108BA142548F800FDF467 /* KKRotationRate.h in Headers */ = {isa = PBXBuildFile; fileRef = DC4108B7142548F800FDF467 /* KKRotationRate.h */; };
 		DC4108BB142548F800FDF467 /* KKRotationRate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4108B8142548F800FDF467 /* KKRotationRate.m */; };
 		DC4108BC142548F800FDF467 /* KKRotationRate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4108B8142548F800FDF467 /* KKRotationRate.m */; };
+		DC478AC616AF0B4E002C4890 /* CCSprite+ReorderChildDirtyProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = DC478AC416AF0B4D002C4890 /* CCSprite+ReorderChildDirtyProperty.h */; };
+		DC478AC716AF0B4E002C4890 /* CCSprite+ReorderChildDirtyProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = DC478AC416AF0B4D002C4890 /* CCSprite+ReorderChildDirtyProperty.h */; };
+		DC478AC816AF0B4E002C4890 /* CCSprite+ReorderChildDirtyProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = DC478AC516AF0B4D002C4890 /* CCSprite+ReorderChildDirtyProperty.m */; };
+		DC478AC916AF0B4E002C4890 /* CCSprite+ReorderChildDirtyProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = DC478AC516AF0B4D002C4890 /* CCSprite+ReorderChildDirtyProperty.m */; };
 		DC53B8C61438F11700EBF5A5 /* KKHitTest.h in Headers */ = {isa = PBXBuildFile; fileRef = DC53B8C41438F11700EBF5A5 /* KKHitTest.h */; };
 		DC53B8C71438F11700EBF5A5 /* KKHitTest.h in Headers */ = {isa = PBXBuildFile; fileRef = DC53B8C41438F11700EBF5A5 /* KKHitTest.h */; };
 		DC53B8C81438F11700EBF5A5 /* KKHitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC53B8C51438F11700EBF5A5 /* KKHitTest.m */; };
@@ -497,8 +529,6 @@
 		DC72238713FC35790014EB8F /* CCSpriteExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC72236013FC35790014EB8F /* CCSpriteExtensions.m */; };
 		DC72238813FC35790014EB8F /* cocos2d-extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC72236113FC35790014EB8F /* cocos2d-extensions.h */; };
 		DC72238913FC35790014EB8F /* cocos2d-extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC72236113FC35790014EB8F /* cocos2d-extensions.h */; };
-		DC72238A13FC35790014EB8F /* FixCategoryBug.h in Headers */ = {isa = PBXBuildFile; fileRef = DC72236313FC35790014EB8F /* FixCategoryBug.h */; };
-		DC72238B13FC35790014EB8F /* FixCategoryBug.h in Headers */ = {isa = PBXBuildFile; fileRef = DC72236313FC35790014EB8F /* FixCategoryBug.h */; };
 		DC7223CB13FC35E00014EB8F /* VTPG_Common.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7223A313FC35E00014EB8F /* VTPG_Common.h */; };
 		DC7223CC13FC35E00014EB8F /* VTPG_Common.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7223A313FC35E00014EB8F /* VTPG_Common.h */; };
 		DC7F433B1438884700FF7A65 /* KKTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7F43391438884700FF7A65 /* KKTouch.h */; };
@@ -557,10 +587,10 @@
 		DC915A0F163146870024064A /* KTMutableNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DC915A0B163146870024064A /* KTMutableNumber.m */; };
 		DC915A121631B39E0024064A /* KTVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = DC915A111631B39D0024064A /* KTVersion.m */; };
 		DC915A131631B39E0024064A /* KTVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = DC915A111631B39D0024064A /* KTVersion.m */; };
-		DC915A221632D0680024064A /* KTTilemapLayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC915A201632D0670024064A /* KTTilemapLayerViewController.h */; };
-		DC915A231632D0680024064A /* KTTilemapLayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC915A201632D0670024064A /* KTTilemapLayerViewController.h */; };
-		DC915A241632D0680024064A /* KTTilemapLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC915A211632D0670024064A /* KTTilemapLayerViewController.m */; };
-		DC915A251632D0680024064A /* KTTilemapLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC915A211632D0670024064A /* KTTilemapLayerViewController.m */; };
+		DC915A221632D0680024064A /* KTTileLayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC915A201632D0670024064A /* KTTileLayerViewController.h */; };
+		DC915A231632D0680024064A /* KTTileLayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC915A201632D0670024064A /* KTTileLayerViewController.h */; };
+		DC915A241632D0680024064A /* KTTileLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC915A211632D0670024064A /* KTTileLayerViewController.m */; };
+		DC915A251632D0680024064A /* KTTileLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC915A211632D0670024064A /* KTTileLayerViewController.m */; };
 		DC91AC95142A247A007AFFE4 /* KKTouches.h in Headers */ = {isa = PBXBuildFile; fileRef = DC91AC93142A247A007AFFE4 /* KKTouches.h */; };
 		DC91AC96142A247A007AFFE4 /* KKTouches.h in Headers */ = {isa = PBXBuildFile; fileRef = DC91AC93142A247A007AFFE4 /* KKTouches.h */; };
 		DC91AC97142A247A007AFFE4 /* KKTouches.m in Sources */ = {isa = PBXBuildFile; fileRef = DC91AC94142A247A007AFFE4 /* KKTouches.m */; };
@@ -571,10 +601,6 @@
 		DCA37DC016133B4500F207E0 /* KTSpriteBatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA37DBC16133B4500F207E0 /* KTSpriteBatchViewController.m */; };
 		DCBEBA8715160AD300D454AC /* KKInputEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = DCBEBA8615160AD300D454AC /* KKInputEnums.h */; };
 		DCBEBA8815160AD300D454AC /* KKInputEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = DCBEBA8615160AD300D454AC /* KKInputEnums.h */; };
-		DCC1EE8F16834CF700893104 /* KTTilemapLayerModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EE8D16834CF700893104 /* KTTilemapLayerModel.h */; };
-		DCC1EE9016834CF700893104 /* KTTilemapLayerModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EE8D16834CF700893104 /* KTTilemapLayerModel.h */; };
-		DCC1EE9116834CF700893104 /* KTTilemapLayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EE8E16834CF700893104 /* KTTilemapLayerModel.m */; };
-		DCC1EE9216834CF700893104 /* KTTilemapLayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EE8E16834CF700893104 /* KTTilemapLayerModel.m */; };
 		DCC1EE961683614100893104 /* KTTilemapTileset.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EE941683614100893104 /* KTTilemapTileset.h */; };
 		DCC1EE971683614100893104 /* KTTilemapTileset.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1EE941683614100893104 /* KTTilemapTileset.h */; };
 		DCC1EE981683614100893104 /* KTTilemapTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1EE951683614100893104 /* KTTilemapTileset.m */; };
@@ -777,14 +803,16 @@
 		DCC29EEB14CB03390035B0B5 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCC29E3614CB03380035B0B5 /* b2Rope.cpp */; };
 		DCC29EEC14CB03390035B0B5 /* b2Rope.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC29E3714CB03380035B0B5 /* b2Rope.h */; };
 		DCC29EED14CB03390035B0B5 /* b2Rope.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC29E3714CB03380035B0B5 /* b2Rope.h */; };
-		DCC86662167B82A700E982B1 /* KTTilemapObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC86660167B82A700E982B1 /* KTTilemapObjectViewController.h */; };
-		DCC86663167B82A700E982B1 /* KTTilemapObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC86660167B82A700E982B1 /* KTTilemapObjectViewController.h */; };
-		DCC86664167B82A700E982B1 /* KTTilemapObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC86661167B82A700E982B1 /* KTTilemapObjectViewController.m */; };
-		DCC86665167B82A700E982B1 /* KTTilemapObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC86661167B82A700E982B1 /* KTTilemapObjectViewController.m */; };
-		DCC8666F167BA17900E982B1 /* KTTilemapLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC8666D167BA17900E982B1 /* KTTilemapLayerView.h */; };
-		DCC86670167BA17900E982B1 /* KTTilemapLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC8666D167BA17900E982B1 /* KTTilemapLayerView.h */; };
-		DCC86671167BA17900E982B1 /* KTTilemapLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8666E167BA17900E982B1 /* KTTilemapLayerView.m */; };
-		DCC86672167BA17900E982B1 /* KTTilemapLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8666E167BA17900E982B1 /* KTTilemapLayerView.m */; };
+		DCC86662167B82A700E982B1 /* KTObjectLayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC86660167B82A700E982B1 /* KTObjectLayerViewController.h */; };
+		DCC86663167B82A700E982B1 /* KTObjectLayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC86660167B82A700E982B1 /* KTObjectLayerViewController.h */; };
+		DCC86664167B82A700E982B1 /* KTObjectLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC86661167B82A700E982B1 /* KTObjectLayerViewController.m */; };
+		DCC86665167B82A700E982B1 /* KTObjectLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC86661167B82A700E982B1 /* KTObjectLayerViewController.m */; };
+		DCC8666F167BA17900E982B1 /* KTTileLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC8666D167BA17900E982B1 /* KTTileLayerView.h */; };
+		DCC86670167BA17900E982B1 /* KTTileLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC8666D167BA17900E982B1 /* KTTileLayerView.h */; };
+		DCC86671167BA17900E982B1 /* KTTileLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8666E167BA17900E982B1 /* KTTileLayerView.m */; };
+		DCC86672167BA17900E982B1 /* KTTileLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8666E167BA17900E982B1 /* KTTileLayerView.m */; };
+		DCC957AB16AB54FC00024038 /* KTObjectLayerSpawnProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC957AA16AB54FC00024038 /* KTObjectLayerSpawnProtocol.h */; };
+		DCC957AC16AB54FC00024038 /* KTObjectLayerSpawnProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC957AA16AB54FC00024038 /* KTObjectLayerSpawnProtocol.h */; };
 		DCDD50BE13A9178100EC4F3A /* KKAdBanner.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDD50A713A9178100EC4F3A /* KKAdBanner.h */; };
 		DCDD50BF13A9178100EC4F3A /* KKAdBanner.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDD50A713A9178100EC4F3A /* KKAdBanner.h */; };
 		DCDD50C013A9178100EC4F3A /* KKAdBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDD50A813A9178100EC4F3A /* KKAdBanner.m */; };
@@ -863,6 +891,22 @@
 		DCE385A4168B31D8000AD309 /* KTAutoscaleNodeProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE385A1168B31D8000AD309 /* KTAutoscaleNodeProxy.h */; };
 		DCE385A5168B31D8000AD309 /* KTAutoscaleNodeProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE385A2168B31D8000AD309 /* KTAutoscaleNodeProxy.m */; };
 		DCE385A6168B31D8000AD309 /* KTAutoscaleNodeProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE385A2168B31D8000AD309 /* KTAutoscaleNodeProxy.m */; };
+		DCE4330616AC2CF4005049EB /* KTTilemapLayerModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4330416AC2CF4005049EB /* KTTilemapLayerModel.h */; };
+		DCE4330716AC2CF4005049EB /* KTTilemapLayerModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4330416AC2CF4005049EB /* KTTilemapLayerModel.h */; };
+		DCE4330816AC2CF4005049EB /* KTTilemapLayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4330516AC2CF4005049EB /* KTTilemapLayerModel.m */; };
+		DCE4330916AC2CF4005049EB /* KTTilemapLayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4330516AC2CF4005049EB /* KTTilemapLayerModel.m */; };
+		DCE4330C16AC2D0E005049EB /* KTTilemapLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4330A16AC2D0E005049EB /* KTTilemapLayerView.h */; };
+		DCE4330D16AC2D0E005049EB /* KTTilemapLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4330A16AC2D0E005049EB /* KTTilemapLayerView.h */; };
+		DCE4330E16AC2D0E005049EB /* KTTilemapLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4330B16AC2D0E005049EB /* KTTilemapLayerView.m */; };
+		DCE4330F16AC2D0E005049EB /* KTTilemapLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4330B16AC2D0E005049EB /* KTTilemapLayerView.m */; };
+		DCE4332216ADEBE0005049EB /* KTTilemapProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4332016ADEBDF005049EB /* KTTilemapProperties.h */; };
+		DCE4332316ADEBE0005049EB /* KTTilemapProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4332016ADEBDF005049EB /* KTTilemapProperties.h */; };
+		DCE4332416ADEBE0005049EB /* KTTilemapProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4332116ADEBDF005049EB /* KTTilemapProperties.m */; };
+		DCE4332516ADEBE0005049EB /* KTTilemapProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4332116ADEBDF005049EB /* KTTilemapProperties.m */; };
+		DCE4332816ADFE99005049EB /* KTTilemapTileProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4332616ADFE98005049EB /* KTTilemapTileProperties.h */; };
+		DCE4332916ADFE99005049EB /* KTTilemapTileProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4332616ADFE98005049EB /* KTTilemapTileProperties.h */; };
+		DCE4332A16ADFE99005049EB /* KTTilemapTileProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4332716ADFE99005049EB /* KTTilemapTileProperties.m */; };
+		DCE4332B16ADFE99005049EB /* KTTilemapTileProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4332716ADFE99005049EB /* KTTilemapTileProperties.m */; };
 		DCE4E8C113FBFEE000F55853 /* CCBigImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4E89313FBFEE000F55853 /* CCBigImage.h */; };
 		DCE4E8C213FBFEE000F55853 /* CCBigImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE4E89313FBFEE000F55853 /* CCBigImage.h */; };
 		DCE4E8C313FBFEE000F55853 /* CCBigImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4E89413FBFEE000F55853 /* CCBigImage.m */; };
@@ -1344,6 +1388,20 @@
 		DC20FFFC15100FCF005AF897 /* NSThread+performBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSThread+performBlock.m"; sourceTree = "<group>"; };
 		DC22A1C1150FC10400B58197 /* CCParticleBatchNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCParticleBatchNode.h; sourceTree = "<group>"; };
 		DC22A1C2150FC10400B58197 /* CCParticleBatchNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCParticleBatchNode.m; sourceTree = "<group>"; };
+		DC22D4C716A8906400D453E4 /* KTMultiTouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTMultiTouchEvent.h; sourceTree = "<group>"; };
+		DC22D4C816A8906400D453E4 /* KTMultiTouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTMultiTouchEvent.m; sourceTree = "<group>"; };
+		DC22D4CE16A8907500D453E4 /* KTTouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTouchEvent.h; sourceTree = "<group>"; };
+		DC22D4CF16A8907500D453E4 /* KTTouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTouchEvent.m; sourceTree = "<group>"; };
+		DC22D50716A97B7300D453E4 /* KTDrawingPrimitivesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTDrawingPrimitivesViewController.h; sourceTree = "<group>"; };
+		DC22D50816A97B7300D453E4 /* KTDrawingPrimitivesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTDrawingPrimitivesViewController.m; sourceTree = "<group>"; };
+		DC22D51116A97DE100D453E4 /* KTDrawingPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTDrawingPrimitives.h; sourceTree = "<group>"; };
+		DC22D51216A97DE100D453E4 /* KTDrawingPrimitives.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTDrawingPrimitives.m; sourceTree = "<group>"; };
+		DC22D51716A9890C00D453E4 /* KTDrawingPrimitivesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTDrawingPrimitivesModel.h; sourceTree = "<group>"; };
+		DC22D51816A9890C00D453E4 /* KTDrawingPrimitivesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTDrawingPrimitivesModel.m; sourceTree = "<group>"; };
+		DC24BF2D16A6F50000A8A8A5 /* KTAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTAction.h; sourceTree = "<group>"; };
+		DC24BF2E16A6F50000A8A8A5 /* KTAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTAction.m; sourceTree = "<group>"; };
+		DC24BF3316A6FE2F00A8A8A5 /* KTMoveAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTMoveAction.h; sourceTree = "<group>"; };
+		DC24BF3416A6FE2F00A8A8A5 /* KTMoveAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTMoveAction.m; sourceTree = "<group>"; };
 		DC2723DA160E45D900D88944 /* libkoboldtouch-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libkoboldtouch-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC27246C160E45EB00D88944 /* libkoboldtouch-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libkoboldtouch-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC27246E160E477300D88944 /* KTGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTGameController.h; sourceTree = "<group>"; };
@@ -1464,6 +1522,8 @@
 		DC32A49C1617820B0055315E /* KTArchiveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTArchiveController.m; sourceTree = "<group>"; };
 		DC4108B7142548F800FDF467 /* KKRotationRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKRotationRate.h; sourceTree = "<group>"; };
 		DC4108B8142548F800FDF467 /* KKRotationRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKRotationRate.m; sourceTree = "<group>"; };
+		DC478AC416AF0B4D002C4890 /* CCSprite+ReorderChildDirtyProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSprite+ReorderChildDirtyProperty.h"; sourceTree = "<group>"; };
+		DC478AC516AF0B4D002C4890 /* CCSprite+ReorderChildDirtyProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSprite+ReorderChildDirtyProperty.m"; sourceTree = "<group>"; };
 		DC53B8C41438F11700EBF5A5 /* KKHitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKHitTest.h; sourceTree = "<group>"; };
 		DC53B8C51438F11700EBF5A5 /* KKHitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKHitTest.m; sourceTree = "<group>"; };
 		DC5D27AA1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSpriteBatchNode+Autoscale.h"; sourceTree = "<group>"; };
@@ -1500,7 +1560,6 @@
 		DC72236013FC35790014EB8F /* CCSpriteExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteExtensions.m; sourceTree = "<group>"; };
 		DC72236113FC35790014EB8F /* cocos2d-extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocos2d-extensions.h"; sourceTree = "<group>"; };
 		DC72236213FC35790014EB8F /* cocos2d-extensions.README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cocos2d-extensions.README.txt"; sourceTree = "<group>"; };
-		DC72236313FC35790014EB8F /* FixCategoryBug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixCategoryBug.h; sourceTree = "<group>"; };
 		DC7223A313FC35E00014EB8F /* VTPG_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPG_Common.h; sourceTree = "<group>"; };
 		DC7F43391438884700FF7A65 /* KKTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKTouch.h; sourceTree = "<group>"; };
 		DC7F433A1438884700FF7A65 /* KKTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKTouch.m; sourceTree = "<group>"; };
@@ -1532,8 +1591,8 @@
 		DC915A0B163146870024064A /* KTMutableNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTMutableNumber.m; sourceTree = "<group>"; };
 		DC915A111631B39D0024064A /* KTVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVersion.m; sourceTree = "<group>"; };
 		DC915A141631B3AA0024064A /* KTVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVersion.h; sourceTree = "<group>"; };
-		DC915A201632D0670024064A /* KTTilemapLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapLayerViewController.h; sourceTree = "<group>"; };
-		DC915A211632D0670024064A /* KTTilemapLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapLayerViewController.m; sourceTree = "<group>"; };
+		DC915A201632D0670024064A /* KTTileLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTileLayerViewController.h; sourceTree = "<group>"; };
+		DC915A211632D0670024064A /* KTTileLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTileLayerViewController.m; sourceTree = "<group>"; };
 		DC91AC93142A247A007AFFE4 /* KKTouches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKTouches.h; sourceTree = "<group>"; };
 		DC91AC94142A247A007AFFE4 /* KKTouches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKTouches.m; sourceTree = "<group>"; };
 		DCA37DBB16133B4500F207E0 /* KTSpriteBatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSpriteBatchViewController.h; sourceTree = "<group>"; };
@@ -1552,8 +1611,6 @@
 		DCB7C163144F0795000BA956 /* kkARCSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kkARCSupport.h; sourceTree = "<group>"; };
 		DCBEBA8615160AD300D454AC /* KKInputEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKInputEnums.h; sourceTree = "<group>"; };
 		DCC18D3E13A9F41000FBEB68 /* HeaderSearchPaths.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HeaderSearchPaths.xcconfig; sourceTree = "<group>"; };
-		DCC1EE8D16834CF700893104 /* KTTilemapLayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapLayerModel.h; sourceTree = "<group>"; };
-		DCC1EE8E16834CF700893104 /* KTTilemapLayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapLayerModel.m; sourceTree = "<group>"; };
 		DCC1EE941683614100893104 /* KTTilemapTileset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapTileset.h; sourceTree = "<group>"; };
 		DCC1EE951683614100893104 /* KTTilemapTileset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapTileset.m; sourceTree = "<group>"; };
 		DCC1EE9A1683623500893104 /* KTTilemapLayerTiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapLayerTiles.h; sourceTree = "<group>"; };
@@ -1655,10 +1712,11 @@
 		DCC29E3414CB03380035B0B5 /* b2WheelJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2WheelJoint.h; sourceTree = "<group>"; };
 		DCC29E3614CB03380035B0B5 /* b2Rope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Rope.cpp; sourceTree = "<group>"; };
 		DCC29E3714CB03380035B0B5 /* b2Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Rope.h; sourceTree = "<group>"; };
-		DCC86660167B82A700E982B1 /* KTTilemapObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapObjectViewController.h; sourceTree = "<group>"; };
-		DCC86661167B82A700E982B1 /* KTTilemapObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapObjectViewController.m; sourceTree = "<group>"; };
-		DCC8666D167BA17900E982B1 /* KTTilemapLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapLayerView.h; sourceTree = "<group>"; };
-		DCC8666E167BA17900E982B1 /* KTTilemapLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapLayerView.m; sourceTree = "<group>"; };
+		DCC86660167B82A700E982B1 /* KTObjectLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTObjectLayerViewController.h; sourceTree = "<group>"; };
+		DCC86661167B82A700E982B1 /* KTObjectLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTObjectLayerViewController.m; sourceTree = "<group>"; };
+		DCC8666D167BA17900E982B1 /* KTTileLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTileLayerView.h; sourceTree = "<group>"; };
+		DCC8666E167BA17900E982B1 /* KTTileLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTileLayerView.m; sourceTree = "<group>"; };
+		DCC957AA16AB54FC00024038 /* KTObjectLayerSpawnProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTObjectLayerSpawnProtocol.h; sourceTree = "<group>"; };
 		DCCC44CA13A9291E00EE6641 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		DCDD509213A9175B00EC4F3A /* libkobold2d-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libkobold2d-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDD509E13A9176400EC4F3A /* libkobold2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libkobold2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1706,6 +1764,14 @@
 		DCE3859C168B2FFB000AD309 /* KTAutoscaleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTAutoscaleController.m; sourceTree = "<group>"; };
 		DCE385A1168B31D8000AD309 /* KTAutoscaleNodeProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTAutoscaleNodeProxy.h; sourceTree = "<group>"; };
 		DCE385A2168B31D8000AD309 /* KTAutoscaleNodeProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTAutoscaleNodeProxy.m; sourceTree = "<group>"; };
+		DCE4330416AC2CF4005049EB /* KTTilemapLayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapLayerModel.h; sourceTree = "<group>"; };
+		DCE4330516AC2CF4005049EB /* KTTilemapLayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapLayerModel.m; sourceTree = "<group>"; };
+		DCE4330A16AC2D0E005049EB /* KTTilemapLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapLayerView.h; sourceTree = "<group>"; };
+		DCE4330B16AC2D0E005049EB /* KTTilemapLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapLayerView.m; sourceTree = "<group>"; };
+		DCE4332016ADEBDF005049EB /* KTTilemapProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapProperties.h; sourceTree = "<group>"; };
+		DCE4332116ADEBDF005049EB /* KTTilemapProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapProperties.m; sourceTree = "<group>"; };
+		DCE4332616ADFE98005049EB /* KTTilemapTileProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTTilemapTileProperties.h; sourceTree = "<group>"; };
+		DCE4332716ADFE99005049EB /* KTTilemapTileProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTTilemapTileProperties.m; sourceTree = "<group>"; };
 		DCE4E89313FBFEE000F55853 /* CCBigImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBigImage.h; sourceTree = "<group>"; };
 		DCE4E89413FBFEE000F55853 /* CCBigImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBigImage.m; sourceTree = "<group>"; };
 		DCE4E89513FBFEE000F55853 /* CCTextureCache+CCBigImageExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCTextureCache+CCBigImageExtensions.h"; sourceTree = "<group>"; };
@@ -2284,6 +2350,47 @@
 			name = "Built-In Shaders";
 			sourceTree = "<group>";
 		};
+		DC22D50516A97B1C00D453E4 /* Drawing Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				DC22D50716A97B7300D453E4 /* KTDrawingPrimitivesViewController.h */,
+				DC22D50816A97B7300D453E4 /* KTDrawingPrimitivesViewController.m */,
+				DC22D51716A9890C00D453E4 /* KTDrawingPrimitivesModel.h */,
+				DC22D51816A9890C00D453E4 /* KTDrawingPrimitivesModel.m */,
+				DC22D51116A97DE100D453E4 /* KTDrawingPrimitives.h */,
+				DC22D51216A97DE100D453E4 /* KTDrawingPrimitives.m */,
+			);
+			name = "Drawing Primitives";
+			sourceTree = "<group>";
+		};
+		DC24BF2A16A6F36D00A8A8A5 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				DC24BF2D16A6F50000A8A8A5 /* KTAction.h */,
+				DC24BF2E16A6F50000A8A8A5 /* KTAction.m */,
+				DC24BF3316A6FE2F00A8A8A5 /* KTMoveAction.h */,
+				DC24BF3416A6FE2F00A8A8A5 /* KTMoveAction.m */,
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
+		DC24BF2C16A6F37400A8A8A5 /* Abilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Abilities;
+			sourceTree = "<group>";
+		};
+		DC24BF3916A74E5B00A8A8A5 /* Object Layer */ = {
+			isa = PBXGroup;
+			children = (
+				DCC957AA16AB54FC00024038 /* KTObjectLayerSpawnProtocol.h */,
+				DCC86660167B82A700E982B1 /* KTObjectLayerViewController.h */,
+				DCC86661167B82A700E982B1 /* KTObjectLayerViewController.m */,
+			);
+			name = "Object Layer";
+			sourceTree = "<group>";
+		};
 		DC27246D160E475300D88944 /* KoboldTouch */ = {
 			isa = PBXGroup;
 			children = (
@@ -2538,7 +2645,6 @@
 				DC72235A13FC35790014EB8F /* ccMoreTypes.h */,
 				DC72236113FC35790014EB8F /* cocos2d-extensions.h */,
 				DC72236213FC35790014EB8F /* cocos2d-extensions.README.txt */,
-				DC72236313FC35790014EB8F /* FixCategoryBug.h */,
 			);
 			name = "Kobold2D Cocos2D Extensions";
 			path = "cocos2d-ext";
@@ -2586,14 +2692,12 @@
 		DC912CDB16298D5300AD381F /* Tilemap */ = {
 			isa = PBXGroup;
 			children = (
-				DCC1EE931683611100893104 /* TMX Loader */,
-				DCC1EE8C16834C9900893104 /* Tile Layer */,
 				DC912CDE16298DBB00AD381F /* KTTilemapViewController.h */,
 				DC912CDF16298DBB00AD381F /* KTTilemapViewController.m */,
 				DC912CDC16298DBB00AD381F /* KTTilemapModel.h */,
 				DC912CDD16298DBB00AD381F /* KTTilemapModel.m */,
-				DCC86660167B82A700E982B1 /* KTTilemapObjectViewController.h */,
-				DCC86661167B82A700E982B1 /* KTTilemapObjectViewController.m */,
+				DCE4330216AC2CBA005049EB /* Layers */,
+				DCC1EE931683611100893104 /* TMX Loader & Model Data */,
 			);
 			name = Tilemap;
 			sourceTree = "<group>";
@@ -2648,6 +2752,8 @@
 		DCA37DC21613588D00F207E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DC24BF2C16A6F37400A8A8A5 /* Abilities */,
+				DC24BF2A16A6F36D00A8A8A5 /* Actions */,
 				DCFD76B51614F858001BF23E /* KTGameModel.h */,
 				DCFD76B61614F858001BF23E /* KTGameModel.m */,
 				DCFD76BB1614F86F001BF23E /* KTSceneModel.h */,
@@ -2684,21 +2790,25 @@
 		DCC1EE8C16834C9900893104 /* Tile Layer */ = {
 			isa = PBXGroup;
 			children = (
-				DC915A201632D0670024064A /* KTTilemapLayerViewController.h */,
-				DC915A211632D0670024064A /* KTTilemapLayerViewController.m */,
-				DCC8666D167BA17900E982B1 /* KTTilemapLayerView.h */,
-				DCC8666E167BA17900E982B1 /* KTTilemapLayerView.m */,
-				DCC1EE8D16834CF700893104 /* KTTilemapLayerModel.h */,
-				DCC1EE8E16834CF700893104 /* KTTilemapLayerModel.m */,
+				DC915A201632D0670024064A /* KTTileLayerViewController.h */,
+				DC915A211632D0670024064A /* KTTileLayerViewController.m */,
+				DCC8666D167BA17900E982B1 /* KTTileLayerView.h */,
+				DCC8666E167BA17900E982B1 /* KTTileLayerView.m */,
+				DC478AC416AF0B4D002C4890 /* CCSprite+ReorderChildDirtyProperty.h */,
+				DC478AC516AF0B4D002C4890 /* CCSprite+ReorderChildDirtyProperty.m */,
 			);
 			name = "Tile Layer";
 			sourceTree = "<group>";
 		};
-		DCC1EE931683611100893104 /* TMX Loader */ = {
+		DCC1EE931683611100893104 /* TMX Loader & Model Data */ = {
 			isa = PBXGroup;
 			children = (
 				DC912CE8162992E400AD381F /* KTTilemap.h */,
 				DC912CE9162992E400AD381F /* KTTilemap.m */,
+				DCE4332016ADEBDF005049EB /* KTTilemapProperties.h */,
+				DCE4332116ADEBDF005049EB /* KTTilemapProperties.m */,
+				DCE4332616ADFE98005049EB /* KTTilemapTileProperties.h */,
+				DCE4332716ADFE99005049EB /* KTTilemapTileProperties.m */,
 				DCC1EE941683614100893104 /* KTTilemapTileset.h */,
 				DCC1EE951683614100893104 /* KTTilemapTileset.m */,
 				DCC1EEA0168362C600893104 /* KTTilemapLayer.h */,
@@ -2710,7 +2820,7 @@
 				DCC1EEAC168363E300893104 /* KTTMXParser.h */,
 				DCC1EEAD168363E400893104 /* KTTMXParser.m */,
 			);
-			name = "TMX Loader";
+			name = "TMX Loader & Model Data";
 			sourceTree = "<group>";
 		};
 		DCC29DD714CB03380035B0B5 /* Collision */ = {
@@ -2941,6 +3051,19 @@
 				DC5D27AB1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.m */,
 			);
 			name = Autoscale;
+			sourceTree = "<group>";
+		};
+		DCE4330216AC2CBA005049EB /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				DCE4330416AC2CF4005049EB /* KTTilemapLayerModel.h */,
+				DCE4330516AC2CF4005049EB /* KTTilemapLayerModel.m */,
+				DCE4330A16AC2D0E005049EB /* KTTilemapLayerView.h */,
+				DCE4330B16AC2D0E005049EB /* KTTilemapLayerView.m */,
+				DCC1EE8C16834C9900893104 /* Tile Layer */,
+				DC24BF3916A74E5B00A8A8A5 /* Object Layer */,
+			);
+			name = Layers;
 			sourceTree = "<group>";
 		};
 		DCE4E89113FBFEE000F55853 /* Extensions */ = {
@@ -3216,6 +3339,10 @@
 				DCF08428163953C0002CBA34 /* KTMultiTouchProtocol.h */,
 				DCF0842216394276002CBA34 /* KTMultiTouchController.h */,
 				DCF0842316394276002CBA34 /* KTMultiTouchController.m */,
+				DC22D4C716A8906400D453E4 /* KTMultiTouchEvent.h */,
+				DC22D4C816A8906400D453E4 /* KTMultiTouchEvent.m */,
+				DC22D4CE16A8907500D453E4 /* KTTouchEvent.h */,
+				DC22D4CF16A8907500D453E4 /* KTTouchEvent.m */,
 				DCF08429163955EA002CBA34 /* KTMultiTouchDelegateWrapper.h */,
 				DCF0842A163955EA002CBA34 /* KTMultiTouchDelegateWrapper.m */,
 				DC20D3D1163C6BAD00F6A866 /* KTMotionProtocol.h */,
@@ -3230,6 +3357,7 @@
 		DCF0842F1639AE91002CBA34 /* Cocos2D Views */ = {
 			isa = PBXGroup;
 			children = (
+				DC22D50516A97B1C00D453E4 /* Drawing Primitives */,
 				DC2AE22F163C167B00F2B1BD /* ColorGradient */,
 				DC2AE228163C121500F2B1BD /* TMX Tilemap */,
 				DCF084301639B176002CBA34 /* Particles */,
@@ -3473,7 +3601,7 @@
 				DC912CE416298DBB00AD381F /* KTTilemapViewController.h in Headers */,
 				DC912CEA162992E400AD381F /* KTTilemap.h in Headers */,
 				DC915A0C163146870024064A /* KTMutableNumber.h in Headers */,
-				DC915A221632D0680024064A /* KTTilemapLayerViewController.h in Headers */,
+				DC915A221632D0680024064A /* KTTileLayerViewController.h in Headers */,
 				DC2FD1881632F1DB002E584E /* KTLabelViewController.h in Headers */,
 				DCF0842416394276002CBA34 /* KTMultiTouchController.h in Headers */,
 				DCF0842B163955EA002CBA34 /* KTMultiTouchDelegateWrapper.h in Headers */,
@@ -3483,9 +3611,8 @@
 				DC2AE232163C169500F2B1BD /* KTColorGradientViewController.h in Headers */,
 				DC2AE238163C330600F2B1BD /* KTMotionController.h in Headers */,
 				DC2AE23E163C435900F2B1BD /* KTMotionDelegateWrapper.h in Headers */,
-				DCC86662167B82A700E982B1 /* KTTilemapObjectViewController.h in Headers */,
-				DCC8666F167BA17900E982B1 /* KTTilemapLayerView.h in Headers */,
-				DCC1EE8F16834CF700893104 /* KTTilemapLayerModel.h in Headers */,
+				DCC86662167B82A700E982B1 /* KTObjectLayerViewController.h in Headers */,
+				DCC8666F167BA17900E982B1 /* KTTileLayerView.h in Headers */,
 				DCC1EE961683614100893104 /* KTTilemapTileset.h in Headers */,
 				DCC1EE9C1683623500893104 /* KTTilemapLayerTiles.h in Headers */,
 				DCC1EEA2168362C600893104 /* KTTilemapLayer.h in Headers */,
@@ -3496,6 +3623,19 @@
 				DCE385A3168B31D8000AD309 /* KTAutoscaleNodeProxy.h in Headers */,
 				DC1773CB1695C68400DCCE0D /* KTCCScene.h in Headers */,
 				DC5D27AC1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.h in Headers */,
+				DC24BF2F16A6F50000A8A8A5 /* KTAction.h in Headers */,
+				DC24BF3516A6FE2F00A8A8A5 /* KTMoveAction.h in Headers */,
+				DC22D4C916A8906400D453E4 /* KTMultiTouchEvent.h in Headers */,
+				DC22D4D016A8907500D453E4 /* KTTouchEvent.h in Headers */,
+				DC22D50916A97B7300D453E4 /* KTDrawingPrimitivesViewController.h in Headers */,
+				DC22D51316A97DE100D453E4 /* KTDrawingPrimitives.h in Headers */,
+				DC22D51916A9890C00D453E4 /* KTDrawingPrimitivesModel.h in Headers */,
+				DCC957AB16AB54FC00024038 /* KTObjectLayerSpawnProtocol.h in Headers */,
+				DCE4330616AC2CF4005049EB /* KTTilemapLayerModel.h in Headers */,
+				DCE4330C16AC2D0E005049EB /* KTTilemapLayerView.h in Headers */,
+				DCE4332216ADEBE0005049EB /* KTTilemapProperties.h in Headers */,
+				DCE4332816ADFE99005049EB /* KTTilemapTileProperties.h in Headers */,
+				DC478AC616AF0B4E002C4890 /* CCSprite+ReorderChildDirtyProperty.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3539,7 +3679,7 @@
 				DC912CE516298DBB00AD381F /* KTTilemapViewController.h in Headers */,
 				DC912CEB162992E400AD381F /* KTTilemap.h in Headers */,
 				DC915A0D163146870024064A /* KTMutableNumber.h in Headers */,
-				DC915A231632D0680024064A /* KTTilemapLayerViewController.h in Headers */,
+				DC915A231632D0680024064A /* KTTileLayerViewController.h in Headers */,
 				DC2FD1891632F1DB002E584E /* KTLabelViewController.h in Headers */,
 				DCF0842516394276002CBA34 /* KTMultiTouchController.h in Headers */,
 				DCF0842C163955EA002CBA34 /* KTMultiTouchDelegateWrapper.h in Headers */,
@@ -3549,9 +3689,8 @@
 				DC2AE233163C169500F2B1BD /* KTColorGradientViewController.h in Headers */,
 				DC2AE239163C330600F2B1BD /* KTMotionController.h in Headers */,
 				DC2AE23F163C435900F2B1BD /* KTMotionDelegateWrapper.h in Headers */,
-				DCC86663167B82A700E982B1 /* KTTilemapObjectViewController.h in Headers */,
-				DCC86670167BA17900E982B1 /* KTTilemapLayerView.h in Headers */,
-				DCC1EE9016834CF700893104 /* KTTilemapLayerModel.h in Headers */,
+				DCC86663167B82A700E982B1 /* KTObjectLayerViewController.h in Headers */,
+				DCC86670167BA17900E982B1 /* KTTileLayerView.h in Headers */,
 				DCC1EE971683614100893104 /* KTTilemapTileset.h in Headers */,
 				DCC1EE9D1683623500893104 /* KTTilemapLayerTiles.h in Headers */,
 				DCC1EEA3168362C600893104 /* KTTilemapLayer.h in Headers */,
@@ -3562,6 +3701,19 @@
 				DCE385A4168B31D8000AD309 /* KTAutoscaleNodeProxy.h in Headers */,
 				DC1773CC1695C68400DCCE0D /* KTCCScene.h in Headers */,
 				DC5D27AD1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.h in Headers */,
+				DC24BF3016A6F50000A8A8A5 /* KTAction.h in Headers */,
+				DC24BF3616A6FE2F00A8A8A5 /* KTMoveAction.h in Headers */,
+				DC22D4CA16A8906400D453E4 /* KTMultiTouchEvent.h in Headers */,
+				DC22D4D116A8907500D453E4 /* KTTouchEvent.h in Headers */,
+				DC22D50A16A97B7300D453E4 /* KTDrawingPrimitivesViewController.h in Headers */,
+				DC22D51416A97DE100D453E4 /* KTDrawingPrimitives.h in Headers */,
+				DC22D51A16A9890C00D453E4 /* KTDrawingPrimitivesModel.h in Headers */,
+				DCC957AC16AB54FC00024038 /* KTObjectLayerSpawnProtocol.h in Headers */,
+				DCE4330716AC2CF4005049EB /* KTTilemapLayerModel.h in Headers */,
+				DCE4330D16AC2D0E005049EB /* KTTilemapLayerView.h in Headers */,
+				DCE4332316ADEBE0005049EB /* KTTilemapProperties.h in Headers */,
+				DCE4332916ADFE99005049EB /* KTTilemapTileProperties.h in Headers */,
+				DC478AC716AF0B4E002C4890 /* CCSprite+ReorderChildDirtyProperty.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3637,7 +3789,6 @@
 				DC72238013FC35790014EB8F /* CCRemoveFromParentAction.h in Headers */,
 				DC72238413FC35790014EB8F /* CCSpriteExtensions.h in Headers */,
 				DC72238813FC35790014EB8F /* cocos2d-extensions.h in Headers */,
-				DC72238A13FC35790014EB8F /* FixCategoryBug.h in Headers */,
 				DC7223CB13FC35E00014EB8F /* VTPG_Common.h in Headers */,
 				DC0124F7141B8A0A001EE27D /* KKInput.h in Headers */,
 				DC0124FD141B8C50001EE27D /* KKInputKeyboard.h in Headers */,
@@ -3714,7 +3865,6 @@
 				DC72238113FC35790014EB8F /* CCRemoveFromParentAction.h in Headers */,
 				DC72238513FC35790014EB8F /* CCSpriteExtensions.h in Headers */,
 				DC72238913FC35790014EB8F /* cocos2d-extensions.h in Headers */,
-				DC72238B13FC35790014EB8F /* FixCategoryBug.h in Headers */,
 				DC7223CC13FC35E00014EB8F /* VTPG_Common.h in Headers */,
 				DC0124F8141B8A0A001EE27D /* KKInput.h in Headers */,
 				DC0124FE141B8C50001EE27D /* KKInputKeyboard.h in Headers */,
@@ -4487,7 +4637,7 @@
 				DC912CEC162992E400AD381F /* KTTilemap.m in Sources */,
 				DC915A0E163146870024064A /* KTMutableNumber.m in Sources */,
 				DC915A121631B39E0024064A /* KTVersion.m in Sources */,
-				DC915A241632D0680024064A /* KTTilemapLayerViewController.m in Sources */,
+				DC915A241632D0680024064A /* KTTileLayerViewController.m in Sources */,
 				DC2FD18A1632F1DB002E584E /* KTLabelViewController.m in Sources */,
 				DCF0842616394276002CBA34 /* KTMultiTouchController.m in Sources */,
 				DCF0842D163955EA002CBA34 /* KTMultiTouchDelegateWrapper.m in Sources */,
@@ -4497,9 +4647,8 @@
 				DC2AE234163C169500F2B1BD /* KTColorGradientViewController.m in Sources */,
 				DC2AE23A163C330600F2B1BD /* KTMotionController.m in Sources */,
 				DC2AE240163C435900F2B1BD /* KTMotionDelegateWrapper.m in Sources */,
-				DCC86664167B82A700E982B1 /* KTTilemapObjectViewController.m in Sources */,
-				DCC86671167BA17900E982B1 /* KTTilemapLayerView.m in Sources */,
-				DCC1EE9116834CF700893104 /* KTTilemapLayerModel.m in Sources */,
+				DCC86664167B82A700E982B1 /* KTObjectLayerViewController.m in Sources */,
+				DCC86671167BA17900E982B1 /* KTTileLayerView.m in Sources */,
 				DCC1EE981683614100893104 /* KTTilemapTileset.m in Sources */,
 				DCC1EE9E1683623500893104 /* KTTilemapLayerTiles.m in Sources */,
 				DCC1EEA4168362C600893104 /* KTTilemapLayer.m in Sources */,
@@ -4510,6 +4659,18 @@
 				DCE385A5168B31D8000AD309 /* KTAutoscaleNodeProxy.m in Sources */,
 				DC1773CD1695C68400DCCE0D /* KTCCScene.m in Sources */,
 				DC5D27AE1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.m in Sources */,
+				DC24BF3116A6F50000A8A8A5 /* KTAction.m in Sources */,
+				DC24BF3716A6FE2F00A8A8A5 /* KTMoveAction.m in Sources */,
+				DC22D4CB16A8906400D453E4 /* KTMultiTouchEvent.m in Sources */,
+				DC22D4D216A8907500D453E4 /* KTTouchEvent.m in Sources */,
+				DC22D50B16A97B7300D453E4 /* KTDrawingPrimitivesViewController.m in Sources */,
+				DC22D51516A97DE100D453E4 /* KTDrawingPrimitives.m in Sources */,
+				DC22D51B16A9890C00D453E4 /* KTDrawingPrimitivesModel.m in Sources */,
+				DCE4330816AC2CF4005049EB /* KTTilemapLayerModel.m in Sources */,
+				DCE4330E16AC2D0E005049EB /* KTTilemapLayerView.m in Sources */,
+				DCE4332416ADEBE0005049EB /* KTTilemapProperties.m in Sources */,
+				DCE4332A16ADFE99005049EB /* KTTilemapTileProperties.m in Sources */,
+				DC478AC816AF0B4E002C4890 /* CCSprite+ReorderChildDirtyProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4554,7 +4715,7 @@
 				DC912CED162992E400AD381F /* KTTilemap.m in Sources */,
 				DC915A0F163146870024064A /* KTMutableNumber.m in Sources */,
 				DC915A131631B39E0024064A /* KTVersion.m in Sources */,
-				DC915A251632D0680024064A /* KTTilemapLayerViewController.m in Sources */,
+				DC915A251632D0680024064A /* KTTileLayerViewController.m in Sources */,
 				DC2FD18B1632F1DB002E584E /* KTLabelViewController.m in Sources */,
 				DCF0842716394276002CBA34 /* KTMultiTouchController.m in Sources */,
 				DCF0842E163955EA002CBA34 /* KTMultiTouchDelegateWrapper.m in Sources */,
@@ -4564,9 +4725,8 @@
 				DC2AE235163C169500F2B1BD /* KTColorGradientViewController.m in Sources */,
 				DC2AE23B163C330600F2B1BD /* KTMotionController.m in Sources */,
 				DC2AE241163C435900F2B1BD /* KTMotionDelegateWrapper.m in Sources */,
-				DCC86665167B82A700E982B1 /* KTTilemapObjectViewController.m in Sources */,
-				DCC86672167BA17900E982B1 /* KTTilemapLayerView.m in Sources */,
-				DCC1EE9216834CF700893104 /* KTTilemapLayerModel.m in Sources */,
+				DCC86665167B82A700E982B1 /* KTObjectLayerViewController.m in Sources */,
+				DCC86672167BA17900E982B1 /* KTTileLayerView.m in Sources */,
 				DCC1EE991683614100893104 /* KTTilemapTileset.m in Sources */,
 				DCC1EE9F1683623500893104 /* KTTilemapLayerTiles.m in Sources */,
 				DCC1EEA5168362C600893104 /* KTTilemapLayer.m in Sources */,
@@ -4577,6 +4737,18 @@
 				DCE385A6168B31D8000AD309 /* KTAutoscaleNodeProxy.m in Sources */,
 				DC1773CE1695C68400DCCE0D /* KTCCScene.m in Sources */,
 				DC5D27AF1695E1BE005256CE /* CCSpriteBatchNode+Autoscale.m in Sources */,
+				DC24BF3216A6F50000A8A8A5 /* KTAction.m in Sources */,
+				DC24BF3816A6FE2F00A8A8A5 /* KTMoveAction.m in Sources */,
+				DC22D4CC16A8906400D453E4 /* KTMultiTouchEvent.m in Sources */,
+				DC22D4D316A8907500D453E4 /* KTTouchEvent.m in Sources */,
+				DC22D50C16A97B7300D453E4 /* KTDrawingPrimitivesViewController.m in Sources */,
+				DC22D51616A97DE100D453E4 /* KTDrawingPrimitives.m in Sources */,
+				DC22D51C16A9890C00D453E4 /* KTDrawingPrimitivesModel.m in Sources */,
+				DCE4330916AC2CF4005049EB /* KTTilemapLayerModel.m in Sources */,
+				DCE4330F16AC2D0E005049EB /* KTTilemapLayerView.m in Sources */,
+				DCE4332516ADEBE0005049EB /* KTTilemapProperties.m in Sources */,
+				DCE4332B16ADFE99005049EB /* KTTilemapTileProperties.m in Sources */,
+				DC478AC916AF0B4E002C4890 /* CCSprite+ReorderChildDirtyProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
